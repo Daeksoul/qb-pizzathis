@@ -126,22 +126,22 @@ RegisterNetEvent('garage:PizzaThisGarage', function()
             isMenuHeader = true, -- Set to true to make a nonclickable title
         },
         {
-            header = "• Stallion",											--Needs to be amended to the Pizza vehicle
-            txt = "Pizza This! Stallion",							--Needs to be amended to the Pizza vehicle
+            header = "• Pizza This! Faggio",
+            txt = "Pizza This! Delivery Bike",
             params = {
                 event = "qb-pizzathis:garage",
                 args = {
-                    vehicle = 'stalion2',									--Needs to be amended to the Pizza vehicle
+                    vehicle = 'foodbike',
                 }
             }
         },
         {
-            header = "• Speedo",									--Needs to be amended to the Pizza vehicle
-            txt = "Pizza This! Van",									--Needs to be amended to the Pizza vehicle
+            header = "• Pizza This! Panto",									--Needs to be amended to the Pizza vehicle
+            txt = "Pizza This! Delivery Car",									--Needs to be amended to the Pizza vehicle
             params = {
                 event = "qb-pizzathis:garage",
                 args = {
-                    vehicle = 'nspeedo',									--Needs to be amended to the Pizza vehicle
+                    vehicle = 'foodcar4',									--Needs to be amended to the Pizza vehicle
                 }
             }
         },
