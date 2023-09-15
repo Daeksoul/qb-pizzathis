@@ -44,8 +44,8 @@ Citizen.CreateThread(function()
 			name = "pizzeria_tray_1",
 			heading = 35.0,
 			debugPoly = false,
-			minZ=13.8,
-			maxZ=14.3,
+			minZ=26.54,
+			maxZ=28.54,
 		}, {
 			options = {
 			    {
@@ -57,7 +57,7 @@ Citizen.CreateThread(function()
 			distance = 1.5
 		})
 
-	exports['qb-target']:AddBoxZone("pizza_tray_2", vector3(-1193.87, -894.38, 14.0), 0.5, 0.7, {
+--[[ 	exports['qb-target']:AddBoxZone("pizza_tray_2", vector3(-1193.87, -894.38, 14.0), 0.5, 0.7, {
 		name="pizzeria_tray_2",
 		heading=318,
 		debugPoly=false,
@@ -72,7 +72,7 @@ Citizen.CreateThread(function()
 		    },
 		},
 		distance = 1.5
-	})
+	}) ]]
 
 --[[ 	exports['qb-target']:AddBoxZone("pizza_tray_3", vector3(-1193.88, -906.98, 14.0), 1, 1, {
 		name="pizzeria_tray_3",
@@ -96,8 +96,8 @@ Citizen.CreateThread(function()
 		name="pizzeriaoven",
 		heading=34,
 		debugPoly=false,
-		minZ=13.0,
-		maxZ=14.4,
+		minZ=26.34,
+		maxZ=28.34,
 	}, {
 		options = {
 			{
@@ -188,8 +188,8 @@ Citizen.CreateThread(function()
             name="pizzeriafridge",
             heading=35,
             debugPoly=false,
-            minZ=13.0,
-            maxZ=15.6,
+            minZ=26.78,
+            maxZ=28.78,
         }, {
                 options = {
                     {
@@ -206,8 +206,8 @@ Citizen.CreateThread(function()
             name="pizzeriadisplay",
             heading=34,
             debugPoly=false,
-            minZ=13.0,
-            maxZ=14.8,
+            minZ=26.78,
+            maxZ=28.78,
         }, {
                 options = {
                     {
@@ -226,8 +226,8 @@ Citizen.CreateThread(function()
             name="craftfood",
             heading=304,
             debugPoly=false,
-            minZ=13.0,
-            maxZ=14.4,
+            minZ=26.78,
+            maxZ=28.78,
         }, {
                 options = {
                     {
@@ -245,8 +245,8 @@ Citizen.CreateThread(function()
             name="Pizzeria_register_1",
             debugPoly=false,
             heading=125,
-            minZ=14.0,
-            maxZ=14.5,
+            minZ=26.4,
+            maxZ=28.4,
         }, {
                 options = {
                     {
@@ -264,8 +264,8 @@ Citizen.CreateThread(function()
             name="Pizzeria_register_2",
             debugPoly=false,
             heading=302,
-            minZ=14.1,
-            maxZ=14.5,
+            minZ=26.1,
+            maxZ=28.1,
             }, {
                     options = {
                         {
