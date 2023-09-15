@@ -326,7 +326,10 @@ end)
 
 -- QB-MENU --
 
-RegisterNetEvent('qb-pizzathis-menu:Food', function(data)
+--[[ RegisterNetEvent('qb-pizzathis-menu:Food', function(data)
+    exports['qb-menu']:openMenu({ ]]
+
+RegisterNetEvent('qb-pizzathis-menu:PizzeriaOven', function(data)
     exports['qb-menu']:openMenu({
         {
             
