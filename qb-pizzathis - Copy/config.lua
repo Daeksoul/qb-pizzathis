@@ -59,7 +59,7 @@ Config.CarSpawnLocation = vector4(-1172.861, -888.4072, 13.940833, 40.516719)
 
 Config.Items = {
 label = "Shop",
-    slots = 14,
+    slots = 17,
     items = {
         [1] = {
             name = "water",
