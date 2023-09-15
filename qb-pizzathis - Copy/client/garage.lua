@@ -29,7 +29,7 @@ Citizen.CreateThread(function()
 			local dist = #(pos - vector3(v.coords.x, v.coords.y, v.coords.z))
 			
 			if dist < 40 and not pedspawned then
-				TriggerEvent('qb-burgershot:spawn:ped', v.coords)
+				TriggerEvent('qb-pizzathis:spawn:ped', v.coords)
 				pedspawned = true
 			end
 			if dist >= 35 then
@@ -40,8 +40,8 @@ Citizen.CreateThread(function()
 	end
 end)
 
-RegisterNetEvent('qb-burgershot:spawn:ped')
-AddEventHandler('qb-burgershot:spawn:ped',function(coords)
+RegisterNetEvent('qb-pizzathis:spawn:ped')
+AddEventHandler('qb-pizzathis:spawn:ped',function(coords)
 	local hash = `ig_floyd`
 
 	RequestModel(hash)
@@ -78,24 +78,24 @@ function drawNotification(Notification)
 	DrawNotification(false, false)
 end
 
-RegisterNetEvent('qb-burgershot:garage')
-AddEventHandler('qb-burgershot:garage', function(bs)
+RegisterNetEvent('qb-pizzathis:garage')
+AddEventHandler('qb-pizzathis:garage', function(bs)
     local vehicle = bs.vehicle  
     local coords = Config.CarSpawnLocation
         if PlayerData.job.onduty then
             if PlayerData.job.name == Config.Job then
-                if vehicle == 'stalion2' then		
+                if vehicle == 'stalion2' then			--Needs to be amended to the Pizza vehicles
                     QBCore.Functions.SpawnVehicle(vehicle, function(veh)
-                        SetVehicleNumberPlateText(veh, "BURGER"..tostring(math.random(1000, 9999)))
+                        SetVehicleNumberPlateText(veh, "P1ZZ4TH15"..tostring(math.random(1000, 9999)))
                         exports['LegacyFuel']:SetFuel(veh, 100.0)
                         SetEntityHeading(veh, coords.w)
                         TaskWarpPedIntoVehicle(PlayerPedId(), veh, -1)
                         TriggerEvent("vehiclekeys:client:SetOwner", GetVehicleNumberPlateText(veh))
                         SetVehicleEngineOn(veh, true, true)
                     end, coords, true)
-                elseif vehicle == 'nspeedo' then		
+                elseif vehicle == 'nspeedo' then		--Needs to be amended to the Pizza vehicles
                     QBCore.Functions.SpawnVehicle(vehicle, function(veh)
-                        SetVehicleNumberPlateText(veh, "BURGER"..tostring(math.random(1000, 9999)))
+                        SetVehicleNumberPlateText(veh, "P1ZZ4TH15"..tostring(math.random(1000, 9999)))
                         SetVehicleLivery(veh, 14)
                         exports['LegacyFuel']:SetFuel(veh, 100.0)
                         SetEntityHeading(veh, coords.w)
@@ -105,13 +105,13 @@ AddEventHandler('qb-burgershot:garage', function(bs)
                     end, coords, true)
                 end
             else 
-                QBCore.Functions.Notify('You are not an employee of Burgershot.', 'error')
+                QBCore.Functions.Notify('You are not an employee of Pizza This!', 'error')
             end
         end
 end)
 
-RegisterNetEvent('qb-burgershot:storecar')
-AddEventHandler('qb-burgershot:storecar', function()
+RegisterNetEvent('qb-pizzathis:storecar')
+AddEventHandler('qb-pizzathis:storecar', function()
     QBCore.Functions.Notify('Work Vehicle Stored!')
     local car = GetVehiclePedIsIn(PlayerPedId(),true)
     NetworkFadeOutEntity(car, true,false)
@@ -119,29 +119,29 @@ AddEventHandler('qb-burgershot:storecar', function()
     QBCore.Functions.DeleteVehicle(car)
 end)
 
-RegisterNetEvent('garage:BurgerShotGarage', function()
+RegisterNetEvent('garage:PizzaThisGarage', function()
     exports['qb-menu']:openMenu({
         {
-            header = "| BurgerShot Garage |",
+            header = "| Pizza This! Garage |",
             isMenuHeader = true, -- Set to true to make a nonclickable title
         },
         {
-            header = "• Stallion",
-            txt = "Declasse Burger Shot Stallion",
+            header = "• Stallion",											--Needs to be amended to the Pizza vehicle
+            txt = "Pizza This! Stallion",							--Needs to be amended to the Pizza vehicle
             params = {
-                event = "qb-burgershot:garage",
+                event = "qb-pizzathis:garage",
                 args = {
-                    vehicle = 'stalion2',
+                    vehicle = 'stalion2',									--Needs to be amended to the Pizza vehicle
                 }
             }
         },
         {
-            header = "• Speedo",
-            txt = "Burger Shot Van",
+            header = "• Speedo",									--Needs to be amended to the Pizza vehicle
+            txt = "Pizza This! Van",									--Needs to be amended to the Pizza vehicle
             params = {
-                event = "qb-burgershot:garage",
+                event = "qb-pizzathis:garage",
                 args = {
-                    vehicle = 'nspeedo',
+                    vehicle = 'nspeedo',									--Needs to be amended to the Pizza vehicle
                 }
             }
         },
@@ -149,7 +149,7 @@ RegisterNetEvent('garage:BurgerShotGarage', function()
             header = "• Store Vehicle",
             txt = "Store Vehicle Inside Garage",
             params = {
-                event = "qb-burgershot:storecar",
+                event = "qb-pizzathis:storecar",
                 args = {
                     
                 }
