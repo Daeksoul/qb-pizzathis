@@ -1,16 +1,17 @@
 Config = {}
 
-Config.Job = 'burgershot'
+Config.Job = 'pizzeria'
 
+--NEEDS TO BE CHANGED
 Config.GaragePedLocations = {
     {coords = vector4(-1178.588, -891.9196, 13.799622, 302.58825)},
 }
 
+--NEEDS TO BE CHANGED
 Config.CarSpawnLocation = vector4(-1172.861, -888.4072, 13.940833, 40.516719)
 
 
 --if u are not using qb-target uncomment this.
-
 -- Config.Locations = {
 --     ["duty"] = {
 --         [1] = vector4(0 , 0 , 0, 0),
@@ -58,10 +59,10 @@ Config.CarSpawnLocation = vector4(-1172.861, -888.4072, 13.940833, 40.516719)
 
 Config.Items = {
 label = "Shop",
-    slots = 7,
+    slots = 14,
     items = {
         [1] = {
-            name = "burger-bun",
+            name = "water",
             price = 0,
             amount = 5,
             info = {},
@@ -69,7 +70,7 @@ label = "Shop",
             slot = 1,
         },
         [2] = {
-            name = "burger-raw",
+            name = "vegetables",
             price = 0,
             amount = 5,
             info = {},
@@ -77,7 +78,7 @@ label = "Shop",
             slot = 2,
         },
         [3] = {
-            name = "burger-tomato",
+            name = "eggs",
             price = 0,
             amount = 5,
             info = {},
@@ -85,7 +86,7 @@ label = "Shop",
             slot = 3,
         },
         [4] = {
-            name = "burger-lettuce",
+            name = "groundcoffee",
             price = 0,
             amount = 5,
             info = {},
@@ -93,7 +94,7 @@ label = "Shop",
             slot = 4,
         },
         [5] = {
-            name = "burger-potato",
+            name = "dairyproducts",
             price = 0,
             amount = 2,
             info = {},
@@ -101,7 +102,7 @@ label = "Shop",
             slot = 5,
         },
         [6] = {
-            name = "burger-mshakeformula",
+            name = "chocolateproducts",
             price = 0,
             amount = 5,
             info = {},
@@ -109,12 +110,68 @@ label = "Shop",
             slot = 6,
         },
         [7] = {
-            name = "burger-sodasyrup",
+            name = "ladyfingers",
             price = 0,
             amount = 5,
             info = {},
             type = "item",
             slot = 7,
+        },
+		[8] = {
+            name = "squid",
+            price = 0,
+            amount = 5,
+            info = {},
+            type = "item",
+            slot = 8,
+        },
+		[9] = {
+            name = "spaghetti",
+            price = 0,
+            amount = 5,
+            info = {},
+            type = "item",
+            slot = 9,
+        },
+		[10] = {
+            name = "mincebeef",
+            price = 0,
+            amount = 5,
+            info = {},
+            type = "item",
+            slot = 10,
+        },
+		[11] = {
+            name = "vodka",
+            price = 0,
+            amount = 5,
+            info = {},
+            type = "item",
+            slot = 11,
+        },
+		[12] = {
+            name = "dough",
+            price = 0,
+            amount = 5,
+            info = {},
+            type = "item",
+            slot = 12,
+        },
+		[13] = {
+            name = "cheese",
+            price = 0,
+            amount = 5,
+            info = {},
+            type = "item",
+            slot = 13,
+        },
+		[14] = {
+            name = "salami",
+            price = 0,
+            amount = 5,
+            info = {},
+            type = "item",
+            slot = 14,
         },
     }
 }
