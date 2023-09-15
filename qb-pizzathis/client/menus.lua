@@ -26,8 +26,8 @@ Citizen.CreateThread(function()
 		name = "PizzaThisDuty",
 		heading = 32,
 		debugPoly = false,
-		minZ=14.0,
-		maxZ=18.0,
+		minZ=26.78,
+		maxZ=28.78,
 	}, {
 		options = {
 		    {  
