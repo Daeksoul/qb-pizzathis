@@ -84,7 +84,7 @@ AddEventHandler('qb-pizzathis:garage', function(bs)
     local coords = Config.CarSpawnLocation
         if PlayerData.job.onduty then
             if PlayerData.job.name == Config.Job then
-                if vehicle == 'stalion2' then			--Needs to be amended to the Pizza vehicles
+                if vehicle == 'foodbike' then			--Food Delivery Faggio Sport
                     QBCore.Functions.SpawnVehicle(vehicle, function(veh)
                         SetVehicleNumberPlateText(veh, "P1ZZ4TH15"..tostring(math.random(1000, 9999)))
                         exports['LegacyFuel']:SetFuel(veh, 100.0)
@@ -93,7 +93,7 @@ AddEventHandler('qb-pizzathis:garage', function(bs)
                         TriggerEvent("vehiclekeys:client:SetOwner", GetVehicleNumberPlateText(veh))
                         SetVehicleEngineOn(veh, true, true)
                     end, coords, true)
-                elseif vehicle == 'nspeedo' then		--Needs to be amended to the Pizza vehicles
+                elseif vehicle == 'foodcar4' then		--Food Delivery Panto 
                     QBCore.Functions.SpawnVehicle(vehicle, function(veh)
                         SetVehicleNumberPlateText(veh, "P1ZZ4TH15"..tostring(math.random(1000, 9999)))
                         SetVehicleLivery(veh, 14)
