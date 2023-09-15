@@ -11,7 +11,7 @@
 
 QBCore Framework - https://github.com/qbcore-framework/qb-core
 
-PolyZone - https://github.com/mkafrin/PolyZone
+PolyZone - https://github.com/mkafrin/PolyZone (OPTIONAL: Only needed if using qb-target)
 
 qb-target - https://github.com/BerkieBb/qb-target (OPTIONAL: Only needed if not using draw text)
 
@@ -19,16 +19,16 @@ qb-input - https://github.com/qbcore-framework/qb-input
 
 qb-menu - https://github.com/qbcore-framework/qb-menu
 
-Map - Gabz 'Pizza This' MLO
+Map - Gabz 'Pizza This' Restaurant MLO
 
-Car - TBA
+Delivery Vehicles - https://www.gta5-mods.com/vehicles/foodworks-food-delivery-pack
 
 
 ## Insert into @qb-smallresources --> server --> consumables.lua
 ```
---Pizza This!
+--PIZZA THIS!
 
---Drinks
+--DRINK ITEMS
 QBCore.Functions.CreateUseableItem("water_bottle", function(source, item)
     local Player = QBCore.Functions.GetPlayer(source)
 	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
@@ -57,7 +57,7 @@ QBCore.Functions.CreateUseableItem("redwine", function(source, item)
     end
 end)
 
---Food
+--FOOD ITEMS
 QBCore.Functions.CreateUseableItem("tiramisu", function(source, item)
     local Player = QBCore.Functions.GetPlayer(source)
 	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
@@ -114,7 +114,7 @@ end)
 ```
 Config.ConsumablesEat = {
 
--- Pizza This! 
+-- PIZZA THIS! 
 
 	["tiramisu"] = math.random(35, 54),
 	["calamri-marinara"] = math.random(35, 54),
@@ -127,7 +127,7 @@ Config.ConsumablesEat = {
 
 Config.ConsumablesDrink = {
 
-	-- Pizza This! 
+	-- PIZZA THIS! 
 
 	["water_bottle"] = math.random(40, 50),
 	["sodacup"] = math.random(40, 50),
@@ -139,7 +139,7 @@ Config.ConsumablesDrink = {
 ## Insert into @qb-core/shared/items.lua 
 
 ```
-SHARE ITEMS TO BE CONFIRMED
+SHARED ITEMS TO BE CONFIRMED
 
 ```
 

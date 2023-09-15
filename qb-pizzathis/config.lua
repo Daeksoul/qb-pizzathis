@@ -2,13 +2,11 @@ Config = {}
 
 Config.Job = 'pizzeria'
 
---COORDS NEEDS TO BE CHANGED
 Config.GaragePedLocations = {
-    {coords = vector4(-1178.588, -891.9196, 13.799622, 302.58825)},
+    {coords = vector4(815.69, -748.07, 26.73, 2.78)},
 }
 
---COORDS NEEDS TO BE CHANGED
-Config.CarSpawnLocation = vector4(-1172.861, -888.4072, 13.940833, 40.516719)
+Config.CarSpawnLocation = vector4(808.75, -737.97, 27.61, 78.37)
 
 
 --ONLY UNCOMMENT IF YOU ARE NOT USING QB-TARGET

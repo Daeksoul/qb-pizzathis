@@ -42,7 +42,7 @@ end)
 
 RegisterNetEvent('qb-pizzathis:spawn:ped')
 AddEventHandler('qb-pizzathis:spawn:ped',function(coords)
-	local hash = `ig_floyd`
+	local hash = 'ig_floyd'
 
 	RequestModel(hash)
 	while not HasModelLoaded(hash) do 

@@ -9,21 +9,21 @@ local onDuty = false
 
 Citizen.CreateThread(function()
 
-    exports['qb-target']:AddTargetModel(`ig_floyd`, {
+    exports['qb-target']:AddTargetModel('ig_floyd', {
         options = {
             {
                 type = "client",
-                event = "garage:BurgerShotGarage",
+                event = "garage:PizzaThisGarage",
                 icon = "fas fa-car",
-                label = "BurgerShot Garage",
+                label = "Pizza This! Garage",
                 job = Config.Job,
             },
         },
         distance = 2.5
     })
 
-	exports['qb-target']:AddBoxZone("BurgerShotDuty", vector3(-1196.95, -902.69, 14.0), 1, 1.2, {
-		name = "BurgerShotDuty",
+	exports['qb-target']:AddBoxZone("PizzaThisDuty", vector3(807.99, -748.54, 26.78), 1, 1.2, {
+		name = "PizzaThisDuty",
 		heading = 32,
 		debugPoly = false,
 		minZ=14.0,
@@ -31,7 +31,7 @@ Citizen.CreateThread(function()
 	}, {
 		options = {
 		    {  
-			event = "qb-burgershot:DutyB",
+			event = "qb-pizzathis:DutyB",
 			icon = "far fa-clipboard",
 			label = "Clock On/Off",
 			job = Config.Job,
@@ -40,8 +40,8 @@ Citizen.CreateThread(function()
 		distance = 1.5
 	})
 
-		exports['qb-target']:AddBoxZone("burger_tray_1", vector3(-1195.29, -892.31, 14.0), 1.05, 1.0, {
-			name = "burger_tray_1",
+		exports['qb-target']:AddBoxZone("pizza_tray_1", vector3(810.97, -752.97, 26.54), 1.05, 1.0, {
+			name = "pizzeria_tray_1",
 			heading = 35.0,
 			debugPoly = false,
 			minZ=13.8,
@@ -49,7 +49,7 @@ Citizen.CreateThread(function()
 		}, {
 			options = {
 			    {
-				event = "qb-burgershot:Tray1",
+				event = "qb-pizzathis:Tray1",
 				icon = "far fa-clipboard",
 				label = "Tray 1",
 			    },
@@ -57,8 +57,8 @@ Citizen.CreateThread(function()
 			distance = 1.5
 		})
 
-	exports['qb-target']:AddBoxZone("burger_tray_2", vector3(-1193.87, -894.38, 14.0), 0.5, 0.7, {
-		name="burger_tray_2",
+	exports['qb-target']:AddBoxZone("pizza_tray_2", vector3(-1193.87, -894.38, 14.0), 0.5, 0.7, {
+		name="pizzeria_tray_2",
 		heading=318,
 		debugPoly=false,
 		minZ=14.0,
@@ -66,7 +66,7 @@ Citizen.CreateThread(function()
 	}, {
 		options = {
 		    {
-			event = "qb-burgershot:Tray2",
+			event = "qb-pizzathis:Tray2",
 			icon = "far fa-clipboard",
 			label = "Tray 2",
 		    },
@@ -74,8 +74,8 @@ Citizen.CreateThread(function()
 		distance = 1.5
 	})
 
-	exports['qb-target']:AddBoxZone("burger_tray_3", vector3(-1193.88, -906.98, 14.0), 1, 1, {
-		name="burger_tray_3",
+--[[ 	exports['qb-target']:AddBoxZone("pizza_tray_3", vector3(-1193.88, -906.98, 14.0), 1, 1, {
+		name="pizzeria_tray_3",
 		heading=350,
 		debugPoly=false,
 		minZ=13.2,
@@ -83,17 +83,17 @@ Citizen.CreateThread(function()
 	}, {
 		options = {
 		    {
-			event = "qb-burgershot:Tray3",
+			event = "qb-pizzathis:Tray3",
 			icon = "far fa-clipboard",
 			label = "Tray 3",
 		    },
 		},
 		distance = 3.5
-	})
+	}) ]]
 
 
-	exports['qb-target']:AddBoxZone("burgershotcooker", vector3(-1200.54, -900.92, 14.0), 1.8, 1.0, {
-		name="burgershotcooker",
+	exports['qb-target']:AddBoxZone("pizzeriaoven", vector3(814.24, -752.95, 26.34), 1.8, 1.0, {
+		name="pizzeriaoven",
 		heading=34,
 		debugPoly=false,
 		minZ=13.0,
@@ -101,16 +101,16 @@ Citizen.CreateThread(function()
 	}, {
 		options = {
 			{
-				event = "qb-burgershot:PattyFry",
-				icon = "fas fa-hamburger",
-				label = "Burger Cook Station",
+				event = "qb-pizzathis:PizzeriaOven",
+				icon = "fa-solid fa-fire-burner",
+				label = "Pizza Oven",
 				job = Config.Job,
 			},
 		},
 		distance = 1.5
 	})
 
-	exports['qb-target']:AddBoxZone("burgershotcooker2 ", vector3(-1202.94, -897.38, 14.0), 1.7, 1, {
+--[[ 	exports['qb-target']:AddBoxZone("burgershotcooker2 ", vector3(-1202.94, -897.38, 14.0), 1.7, 1, {
 		name="burgershotcooker2 ",
 		heading=34,
 		debugPoly=false,
@@ -119,17 +119,17 @@ Citizen.CreateThread(function()
 	}, {
 		options = {
 			{
-				event = "qb-burgershot:PattyFry",
+				event = "qb-pizzathis:PattyFry",
 				icon = "fas fa-hamburger",
 				label = "Burger Cook Station 2",
 				job = Config.Job,
 			},
 		},
 		distance = 1.5
-	})
+	}) ]]
 
-		exports['qb-target']:AddBoxZone("burgershotfryer", vector3(-1202.01, -899.27, 14.0), 2.5, 1.5, {
-		name="burgershotfryer",
+--[[ 		exports['qb-target']:AddBoxZone("pizzeriafryer", vector3(807.66, -761.21, 26.78), 2.5, 1.5, {
+		name="pizzeriafryer",
 		heading=35,
 		debugPoly=false,
 		minZ=13.0,
@@ -137,18 +137,18 @@ Citizen.CreateThread(function()
 		}, {
 		    options = {
 			{
-			    event = "qb-burgershot:Fries",
+			    event = "qb-pizzathis:Fries",
 			    icon = "fas fa-box",
 			    label = "Make Fries",
 			    job = Config.Job,
 			},
 		    },
 		    distance = 1.5
-		})
+		}) ]]
 
 
-	exports['qb-target']:AddBoxZone("burgershotdrinks", vector3(-1199.54, -895.52, 14.0), 2.2, 0.6, {
-	    name="burgershotdrinks",
+--[[ 	exports['qb-target']:AddBoxZone("pizzeriadrinks", vector3(813.48, -749.32, 26.78), 2.2, 0.6, {
+	    name="pizzeriadrinks",
 	    heading=34,
 	    debugPoly=false,
 	    minZ=13.8,
@@ -156,16 +156,16 @@ Citizen.CreateThread(function()
 	    }, {
 		options = {
 		    {
-			event = "qb-burgershot-menu:DrinkMenu",
+			event = "qb-pizzathis-menu:DrinkMenu",
 			icon = "fas fa-filter",
 			label = "Make Some Drinks",
 			job = Config.Job,
 		    },
 		},
 		distance = 1.5
-	    })
+	    }) ]]
 
-        exports['qb-target']:AddBoxZone("burgershotdrinks2", vector3(-1189.08, -905.28, 14.0), 1.15, 0.7, {
+--[[         exports['qb-target']:AddBoxZone("burgershotdrinks2", vector3(-1189.08, -905.28, 14.0), 1.15, 0.7, {
             name="burgershotdrinks2",
             heading=33,
             debugPoly=false,
@@ -174,18 +174,18 @@ Citizen.CreateThread(function()
             }, {
                 options = {
                     {
-                        event = "qb-burgershot-menu:DrinkMenu",
+                        event = "qb-pizzathis-menu:DrinkMenu",
                         icon = "fas fa-filter",
                         label = "Make Some Drinks",
                         job = Config.Job,
                     },
                 },
                 distance = 1.5
-            })
+            }) ]]
 
 
-         exports['qb-target']:AddBoxZone("burgerfridge", vector3(-1203.71, -895.86, 14.0), 1.6, 1, {
-            name="burgerfridge",
+         exports['qb-target']:AddBoxZone("pizzeriafridge", vector3(806.2, -761.67, 26.78), 1.6, 1, {
+            name="pizzeriafridge",
             heading=35,
             debugPoly=false,
             minZ=13.0,
@@ -193,7 +193,7 @@ Citizen.CreateThread(function()
         }, {
                 options = {
                     {
-                        event = "qb-burgershot-menu:OrderMenu",
+                        event = "qb-pizzathis-menu:OrderMenu",
                         icon = "fas fa-laptop",
                         label = "Order Ingredients!",
                         job = Config.Job,
@@ -202,8 +202,8 @@ Citizen.CreateThread(function()
                 distance = 1.5
             })
 
-        exports['qb-target']:AddBoxZone("burgershotdisplay", vector3(-1197.78, -894.45, 14.0), 4.6, 1.2, {
-            name="burgershotdisplay",
+        exports['qb-target']:AddBoxZone("pizzeriadisplay", vector3(812.13, -754.89, 26.78), 4.6, 1.2, {
+            name="pizzeriadisplay",
             heading=34,
             debugPoly=false,
             minZ=13.0,
@@ -211,7 +211,7 @@ Citizen.CreateThread(function()
         }, {
                 options = {
                     {
-                        event = "qb-burgershot:Storage",
+                        event = "qb-pizzathis:Storage",
                         icon = "fas fa-box",
                         label = "Storage",
                         job = Config.Job,
@@ -221,8 +221,9 @@ Citizen.CreateThread(function()
             })
 
 
-        exports['qb-target']:AddBoxZone("craftburger", vector3(-1197.57, -899.41, 14.0), 1.8, 0.7, {
-            name="craftburger",
+            -----NEED TO FIGURE OUT WHAT THIS IS/DOES
+        exports['qb-target']:AddBoxZone("craftfood", vector3(807.71, -757.5, 26.78), 1.8, 0.7, {
+            name="craftfood",
             heading=304,
             debugPoly=false,
             minZ=13.0,
@@ -230,9 +231,9 @@ Citizen.CreateThread(function()
         }, {
                 options = {
                     {
-                        event = "qb-burgershot-menu:Burgers",
-                        icon = "fas fa-cheeseburger",
-                        label = "Burger Work Station",
+                        event = "qb-pizzathis-menu:Food",
+                        icon = "fa-solid fa-pizza-slice",
+                        label = "Pizzeria Work Station",
                         job = Config.Job,
                     },
                 },
@@ -240,8 +241,8 @@ Citizen.CreateThread(function()
             })
 
 
-        exports['qb-target']:AddBoxZone("BurgerShot_register_1", vector3(-1196.01, -891.34, 14.0), 0.5, 0.4, {
-            name="BurgerShot_register_1",
+        exports['qb-target']:AddBoxZone("Pizzeria_register_1", vector3(811.5, -752.03, 26.4), 0.5, 0.4, {
+            name="Pizzeria_register_1",
             debugPoly=false,
             heading=125,
             minZ=14.0,
@@ -249,7 +250,7 @@ Citizen.CreateThread(function()
         }, {
                 options = {
                     {
-                        event = "qb-burgershot:bill",
+                        event = "qb-pizzathis:bill",
                         parms = "1",
                         icon = "fas fa-credit-card",
                         label = "Charge Customer",
@@ -259,8 +260,8 @@ Citizen.CreateThread(function()
                 distance = 1.5
             })
 
-        exports['qb-target']:AddBoxZone("BurgerShot_register_2", vector3(-1194.65, -893.3, 14.0), 0.6, 0.5, {
-            name="BurgerShot_register_2",
+        exports['qb-target']:AddBoxZone("Pizzeria_register_2", vector3(811.36, -750.7, 26.1), 0.6, 0.5, {
+            name="Pizzeria_register_2",
             debugPoly=false,
             heading=302,
             minZ=14.1,
@@ -268,7 +269,7 @@ Citizen.CreateThread(function()
             }, {
                     options = {
                         {
-                            event = "qb-burgershot:bill",
+                            event = "qb-pizzathis:bill",
                             parms = "2",
                             icon = "fas fa-credit-card",
                             label = "Charge Customer",
@@ -279,7 +280,7 @@ Citizen.CreateThread(function()
                 })  
 
 
-        exports['qb-target']:AddBoxZone("BurgerShot_register_3", vector3(-1193.39, -895.22, 14.0), 0.6, 0.4, {
+--[[         exports['qb-target']:AddBoxZone("BurgerShot_register_3", vector3(-1193.39, -895.22, 14.0), 0.6, 0.4, {
             name="BurgerShot_register_3",
             debugPoly=false,
             heading=125,
@@ -288,7 +289,7 @@ Citizen.CreateThread(function()
                     }, {
                             options = {
                                 {
-                                    event = "qb-burgershot:bill",
+                                    event = "qb-pizzathis:bill",
                                     parms = "3",
                                     icon = "fas fa-credit-card",
                                     label = "Charge Customer",
@@ -310,7 +311,7 @@ Citizen.CreateThread(function()
                 }, {
                         options = {
                             {
-                                event = "qb-burgershot:bill",
+                                event = "qb-pizzathis:bill",
                                 parms = "4",
                                 icon = "fas fa-credit-card",
                                 label = "Charge Customer",
@@ -318,66 +319,74 @@ Citizen.CreateThread(function()
                             },
                         },
                         distance = 1.5
-            })
+            }) ]]
 
 end)
 
 
 -- QB-MENU --
 
-RegisterNetEvent('qb-burgershot-menu:Burgers', function(data)
+RegisterNetEvent('qb-pizzathis-menu:Food', function(data)
     exports['qb-menu']:openMenu({
         {
             
-            header = "| Available Burgers |",
+            header = "| Available Food Items |",
             isMenuHeader = true, -- Set to true to make a nonclickable title
         },
         {
             
-            header = "• Moneyshot Burger",
-            txt = "Bun , Cooked Patty , Tomato , Lettuce",
+            header = "• Tiramisu",
+            txt = "Eggs (2) , Ground Coffee (2) , Dairy Products (2) , Chocolate Products (2) , Lady Fingers (2) ",
             params = {
-                event = "qb-burgershot:MoneyShot"
+                event = "qb-pizzathis:tiramisu"
             }
         },
         {
             
-            header = "• Meat Free Burger",
-            txt = "Bun , Tomato , Lettuce",
+            header = "• Calamri Marinara",
+            txt = "Squid (1) , Spaghetti (3) , Sauce (3)",
             params = {
-                event = "qb-burgershot:MeatFree"
+                event = "qb-pizzathis:calamri-marinara"
             }
         },
         {
             
-            header = "• Bleeder Burger",
-            txt = "Bun , Cooked Patty , Tomato , Lettuce",
+            header = "• Spaghetti Meatballs",
+            txt = "spaghetti (1) , Mince Beef (3) , sauce (3)",
             params = {
-                event = "qb-burgershot:BleederBurger"
+                event = "qb-pizzathis:spaghetti-meatballs"
             }
         },
         {
             
-            header = "• The Heart Stopper",
-            txt = "Bun , Cooked Patty , Tomato , Lettuce",
+            header = "• Pasta Alla Vodka",
+            txt = "spaghetti (1) , Vodka (3) , Dairy Products (2) , Vegetables (2)",
             params = {
-                event = "qb-burgershot:HeartStopper"
+                event = "qb-pizzathis:alla-vodka"
             }
         },
         {
             
-            header = "• Torpedo Roll",
-            txt = "Bun , Cooked Meat",
+            header = "• Cheese Pizza",
+            txt = "Dough (1) , Sauce (3) , Cheese (4)",
             params = {
-                event = "qb-burgershot:Torpedo"
+                event = "qb-pizzathis:cheese-pizza"
             }
         },
         {
             
-            header = "• Murder Meal",
-            txt = "The Heart Stopper, Fries and SoftDrink",
+            header = "• Diavola Pizza",
+            txt = "Dough (1) , Sauce (3) , Cheese (4) , Vegetables (2) , Salami (2)",
             params = {
-                event = "qb-burgershot:CreateMurderMeal"
+                event = "qb-pizzathis:diavola-pizza"
+            }
+        },
+        {
+            
+            header = "• Vegetarian Pizza",
+            txt = "Dough (1) , Sauce (3) , Cheese (4) , Vegetables (2)",
+            params = {
+                event = "qb-pizzathis:vegetarian-pizza"
             }
         },
         {
@@ -389,7 +398,7 @@ RegisterNetEvent('qb-burgershot-menu:Burgers', function(data)
 end)
 
 
-RegisterNetEvent('qb-burgershot-menu:OrderMenu', function(data)
+RegisterNetEvent('qb-pizzathis-menu:OrderMenu', function(data)
     exports['qb-menu']:openMenu({
         {
             
@@ -401,7 +410,7 @@ RegisterNetEvent('qb-burgershot-menu:OrderMenu', function(data)
             header = "• Order Items",
             txt = "Order New Ingredients!",
             params = {
-                event = "qb-burgershot:shop"
+                event = "qb-pizzathis:shop"
             }
         },
         {
@@ -409,7 +418,7 @@ RegisterNetEvent('qb-burgershot-menu:OrderMenu', function(data)
             header = "• Open Fridge",
             txt = "See what you have in storage",
             params = {
-                event = "qb-burgershot:Storage2"
+                event = "qb-pizzathis:Storage2"
             }
         },
         {
@@ -419,7 +428,7 @@ RegisterNetEvent('qb-burgershot-menu:OrderMenu', function(data)
     })
 end)
 
-RegisterNetEvent('qb-burgershot-menu:DrinkMenu', function(data)
+--[[ RegisterNetEvent('qb-pizzathis-menu:DrinkMenu', function(data)
     exports['qb-menu']:openMenu({
         {
             id = 0,
@@ -431,7 +440,7 @@ RegisterNetEvent('qb-burgershot-menu:DrinkMenu', function(data)
             header = "• Soft Drink",
             txt = "Soda Syrup",
             params = {
-                event = "qb-burgershot:SoftDrink"
+                event = "qb-pizzathis:SoftDrink"
             }
         },
         {
@@ -439,7 +448,7 @@ RegisterNetEvent('qb-burgershot-menu:DrinkMenu', function(data)
             header = "• Milkshake",
             txt = "Milkshake Formula",
             params = {
-                event = "qb-burgershot:mShake"
+                event = "qb-pizzathis:mShake"
             }
         },
         {
@@ -448,12 +457,12 @@ RegisterNetEvent('qb-burgershot-menu:DrinkMenu', function(data)
             isMenuHeader = true, -- Set to true to make a nonclickable title
         },
     })
-end)
+end) ]]
 
 
 -- Till Stuff --
-RegisterNetEvent("qb-burgershot:bill")
-AddEventHandler("qb-burgershot:bill", function()
+RegisterNetEvent("qb-pizzathis:bill")
+AddEventHandler("qb-pizzathis:bill", function()
     local bill = exports['qb-input']:ShowInput({
         header = "Create Receipt",
 		submitText = "Bill",
@@ -477,7 +486,7 @@ AddEventHandler("qb-burgershot:bill", function()
         if bill.citizenid == nil or bill.billprice == nil then 
             return 
         end
-        TriggerServerEvent("qb-burgershot:bill:player", bill.citizenid, bill.billprice)
+        TriggerServerEvent("qb-pizzathis:bill:player", bill.citizenid, bill.billprice)
     end
 end)
 
