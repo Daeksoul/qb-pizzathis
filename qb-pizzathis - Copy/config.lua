@@ -117,7 +117,7 @@ label = "Shop",
             type = "item",
             slot = 7,
         },
-		[8] = {
+	[8] = {
             name = "squid",
             price = 0,
             amount = 5,
@@ -125,7 +125,7 @@ label = "Shop",
             type = "item",
             slot = 8,
         },
-		[9] = {
+	[9] = {
             name = "spaghetti",
             price = 0,
             amount = 5,
@@ -133,7 +133,7 @@ label = "Shop",
             type = "item",
             slot = 9,
         },
-		[10] = {
+	[10] = {
             name = "mincebeef",
             price = 0,
             amount = 5,
@@ -141,7 +141,7 @@ label = "Shop",
             type = "item",
             slot = 10,
         },
-		[11] = {
+	[11] = {
             name = "vodka",
             price = 0,
             amount = 5,
@@ -149,7 +149,7 @@ label = "Shop",
             type = "item",
             slot = 11,
         },
-		[12] = {
+	[12] = {
             name = "dough",
             price = 0,
             amount = 5,
@@ -157,7 +157,7 @@ label = "Shop",
             type = "item",
             slot = 12,
         },
-		[13] = {
+	[13] = {
             name = "cheese",
             price = 0,
             amount = 5,
@@ -165,13 +165,37 @@ label = "Shop",
             type = "item",
             slot = 13,
         },
-		[14] = {
+	[14] = {
             name = "salami",
             price = 0,
             amount = 5,
             info = {},
             type = "item",
             slot = 14,
+        },
+	[15] = {
+            name = "yeast",
+            price = 0,
+            amount = 5,
+            info = {},
+            type = "item",
+            slot = 15,
+        },
+	[16] = {
+            name = "salt",
+            price = 0,
+            amount = 5,
+            info = {},
+            type = "item",
+            slot = 16,
+        },
+	[17] = {
+            name = "flour",
+            price = 0,
+            amount = 5,
+            info = {},
+            type = "item",
+            slot = 17,
         },
     }
 }
