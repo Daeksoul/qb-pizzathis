@@ -1,167 +1,192 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
-RegisterNetEvent('qb-burgershot:open:murdermeal', function()
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-    local randomToy = math.random(1,10)
 
-    Player.Functions.RemoveItem("burger-murdermeal",1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-murdermeal"], "remove")
+--TOYS ARE A WORK IN PROGRESS!
+-- RegisterNetEvent('qb-pizzathis:open:murdermeal', function()
+    -- local src = source
+    -- local Player = QBCore.Functions.GetPlayer(src)
+    -- local randomToy = math.random(1,10)
 
-    Player.Functions.AddItem("burger-heartstopper", 1)
-    TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["burger-heartstopper"], "add")
-    Player.Functions.AddItem("burger-softdrink", 1)
-    TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["burger-softdrink"], "add")
-    Player.Functions.AddItem("burger-fries", 1)
-    TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["burger-fries"], "add")
+    -- Player.Functions.RemoveItem("burger-murdermeal",1)
+    -- TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-murdermeal"], "remove")
 
-    if randomToy < 4 then
-        Player.Functions.AddItem("burger-coupon10", 1)
-        TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["burger-coupon10"], "add")
+    -- Player.Functions.AddItem("burger-heartstopper", 1)
+    -- TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["burger-heartstopper"], "add")
+    -- Player.Functions.AddItem("burger-softdrink", 1)
+    -- TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["burger-softdrink"], "add")
+    -- Player.Functions.AddItem("burger-fries", 1)
+    -- TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["burger-fries"], "add")
+
+    -- if randomToy < 4 then
+        -- Player.Functions.AddItem("pizza-coupon10", 1)
+        -- TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["pizza-coupon10"], "add")
             
-    elseif randomToy == 4 then
-        Player.Functions.AddItem("burger-toy1", 1)
-        TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["burger-toy1"], "add")
+    -- elseif randomToy == 4 then
+        -- Player.Functions.AddItem("pizza-toy1", 1)
+        -- TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["pizza-toy1"], "add")
             
-    elseif randomToy < 10 and randomToy > 4 then
-       Player.Functions.AddItem("burger-coupon15", 1)
-        TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["burger-coupon15"], "add")
+    -- elseif randomToy < 10 and randomToy > 4 then
+       -- Player.Functions.AddItem("pizza-coupon15", 1)
+        -- TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["pizza-coupon15"], "add")
             
-    elseif randomToy == 10 then
-        Player.Functions.AddItem("burger-toy2", 1)
-        TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["burger-toy2"], "add")
+    -- elseif randomToy == 10 then
+        -- Player.Functions.AddItem("pizza-toy2", 1)
+        -- TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["pizza-toy2"], "add")
             
-    elseif randomToy > 10 and randomToy < 15 then
-        TriggerClientEvent("QBCore:Notify", src, "No toy in Box Looool", "error")
-    elseif randomToy == 15 then
-        Player.Functions.AddItem("burger-coupon25", 1)
-        TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["burger-coupon25"], "add")
+    -- elseif randomToy > 10 and randomToy < 15 then
+        -- TriggerClientEvent("QBCore:Notify", src, "No toy in Box Looool", "error")
+    -- elseif randomToy == 15 then
+        -- Player.Functions.AddItem("pizza-coupon25", 1)
+        -- TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["pizza-coupon25"], "add")
                         
-    end  
-end)
+    -- end  
+-- end)
 
-RegisterNetEvent('qb-burgershot:create:murdermeal', function()
+
+--NON-PIZZA FOOD ITEMS
+
+RegisterNetEvent('qb-pizzathis:create:tiramisu', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
 
-    Player.Functions.RemoveItem("burger-heartstopper",1)
-    TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["burger-heartstopper"], "remove")
-    Player.Functions.RemoveItem("burger-softdrink",1)
-    TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["burger-softdrink"], "remove")
-
-    Player.Functions.AddItem("burger-murdermeal", 1)
-    TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["burger-murdermeal"], "add")
-
-
+    Player.Functions.RemoveItem("eggs",2)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["eggs"], "remove")
+    Player.Functions.RemoveItem("groundcoffee",2)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["groundcoffee"], "remove")
+    Player.Functions.RemoveItem("dairyproducts",2)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["dairyproducts"], "remove")
+    Player.Functions.RemoveItem("chocolateproducts",2)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["chocolateproducts"], "remove")
+    Player.Functions.RemoveItem("ladyfingers",2)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["ladyfingers"], "remove")
+    
+    Player.Functions.AddItem("tiramisu", 1)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["tiramisu"], "add")
 end)
 
-RegisterNetEvent('qb-burgershot:create:burgerbleeder', function()
+RegisterNetEvent('qb-pizzathis:create:calamri-marinara', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
 
-    Player.Functions.RemoveItem("burger-meat",1)
-    TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["burger-meat"], "remove")
-    Player.Functions.RemoveItem("burger-lettuce",1)
-    TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["burger-lettuce"], "remove")
-    Player.Functions.RemoveItem("burger-bun",1)
-    TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["burger-bun"], "remove")
-    Player.Functions.RemoveItem("burger-tomato",1)
-    TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["burger-tomato"], "remove")
-    Player.Functions.AddItem("burger-bleeder", 1)
-    TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["burger-bleeder"], "add")
+    Player.Functions.RemoveItem("squid",1)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["squid"], "remove")
+    Player.Functions.RemoveItem("spaghetti",3)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["spaghetti"], "remove")
+    Player.Functions.RemoveItem("sauce",3)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["sauce"], "remove")
+    
+    Player.Functions.AddItem("calamri-marinara", 1)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["calamri-marinara"], "add")
 end)
 
-
-RegisterNetEvent('qb-burgershot:create:burgermoneyshot', function()
+RegisterNetEvent('qb-pizzathis:create:spaghetti-meatballs', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
 
-    Player.Functions.RemoveItem("burger-meat",1)
-    TriggerClientEvent("inventory:client:ItemBox", src,QBCore.Shared.Items["burger-meat"], "remove")
-
-    Player.Functions.RemoveItem("burger-lettuce",1)
-    TriggerClientEvent("inventory:client:ItemBox", src,QBCore.Shared.Items["burger-lettuce"], "remove")
+    Player.Functions.RemoveItem("spaghetti",1)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["spaghetti"], "remove")
+    Player.Functions.RemoveItem("sauce",3)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["sauce"], "remove")
+    Player.Functions.RemoveItem("mincebeef",3)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["mincebeef"], "remove")
     
-    Player.Functions.RemoveItem("burger-bun",1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-bun"], "remove")
-    
-    Player.Functions.RemoveItem("burger-tomato",1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-tomato"], "remove")
-    
-    Player.Functions.AddItem("burger-moneyshot", 1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-moneyshot"], "add")
+    Player.Functions.AddItem("spaghetti-meatballs", 1)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["spaghetti-meatballs"], "add")
 end)
 
-RegisterNetEvent('qb-burgershot:create:burgerheartstopper', function()
+RegisterNetEvent('qb-pizzathis:create:spaghetti-meatballs', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
 
-    Player.Functions.RemoveItem("burger-meat",1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-meat"], "remove")
-
-    Player.Functions.RemoveItem("burger-lettuce",1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-lettuce"], "remove")
+    Player.Functions.RemoveItem("spaghetti",1)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["spaghetti"], "remove")
+    Player.Functions.RemoveItem("vodka",3)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["vodka"], "remove")
+    Player.Functions.RemoveItem("dairyproducts",2)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["dairyproducts"], "remove")
+    Player.Functions.RemoveItem("vegetables",2)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["vegetables"], "remove")
     
-    Player.Functions.RemoveItem("burger-bun",1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-bun"], "remove")
-    
-    Player.Functions.RemoveItem("burger-tomato",1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-tomato"], "remove")
-    
-    Player.Functions.AddItem("burger-heartstopper", 1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-heartstopper"], "add")
+    Player.Functions.AddItem("alla-vodka", 1)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["alla-vodka"], "add")
 end)
 
-RegisterNetEvent('qb-burgershot:create:torpedo', function()
+--PIZZA FOOD ITEMS
+
+RegisterNetEvent('qb-pizzathis:create:cheese-pizza', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
 
-    Player.Functions.RemoveItem("burger-meat",1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-meat"], "remove")
+    Player.Functions.RemoveItem("dough",1)
+    TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["dough"], "remove")
+    Player.Functions.RemoveItem("sauce",3)
+    TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["sauce"], "remove")
+	Player.Functions.RemoveItem("cheese",4)
+    TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["cheese"], "remove")
 
-    Player.Functions.RemoveItem("burger-bun",1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-bun"], "remove")
-    
-    Player.Functions.AddItem("burger-torpedo", 1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-torpedo"], "add")
+    Player.Functions.AddItem("cheese-pizza", 1)
+    TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["cheese-pizza"], "add")
+
+
 end)
 
-RegisterNetEvent('qb-burgershot:create:burgermeatfree', function()
+RegisterNetEvent('qb-pizzathis:create:diavola-pizza', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
 
-    Player.Functions.RemoveItem("burger-tomato",1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-tomato"], "remove")
+    Player.Functions.RemoveItem("dough",1)
+    TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["dough"], "remove")
+    Player.Functions.RemoveItem("sauce",3)
+    TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["sauce"], "remove")
+    Player.Functions.RemoveItem("cheese",4)
+    TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["cheese"], "remove")
+    Player.Functions.RemoveItem("vegetables",2)
+    TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["vegetables"], "remove")
+	Player.Functions.RemoveItem("salami",2)
+    TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["salami"], "remove")
 
-    Player.Functions.RemoveItem("burger-lettuce",1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-lettuce"], "remove")
-    
-    Player.Functions.RemoveItem("burger-bun",1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-bun"], "remove")
-    
-    Player.Functions.AddItem("burger-meatfre", 1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-meatfre"], "add")
+    Player.Functions.AddItem("diavola-pizza", 1)
+    TriggerClientEvent("inventory:client:ItemBox", src,  QBCore.Shared.Items["diavola-pizza"], "add")
 end)
 
-QBCore.Functions.CreateCallback('qb-burgershot:server:get:ingredientBurger', function(source, cb)
+
+RegisterNetEvent('qb-pizzathis:create:vegetarian-pizza', function()
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+
+    Player.Functions.RemoveItem("dough",1)
+    TriggerClientEvent("inventory:client:ItemBox", src,QBCore.Shared.Items["dough"], "remove")
+    Player.Functions.RemoveItem("sauce",3)
+    TriggerClientEvent("inventory:client:ItemBox", src,QBCore.Shared.Items["sauce"], "remove")
+    Player.Functions.RemoveItem("cheese",4)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["cheese"], "remove")
+    Player.Functions.RemoveItem("vegetables",2)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["vegetables"], "remove")
+    
+    Player.Functions.AddItem("vegetarian-pizza", 1)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["vegetarian-pizza"], "add")
+end)
+
+--CRAFTED INGREDIENTS
+
+QBCore.Functions.CreateCallback('qb-pizzathis:server:get:sauce', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
-    local lettuce = Ply.Functions.GetItemByName("burger-lettuce")
-    local meat = Ply.Functions.GetItemByName("burger-meat")
-    local bun = Ply.Functions.GetItemByName("burger-bun")
-    local tomato = Ply.Functions.GetItemByName("burger-tomato")
-    if lettuce ~= nil and meat ~= nil and bun ~= nil and tomato ~= nil then
+    local water = Ply.Functions.GetItemByName("water_bottle")
+    local veg = Ply.Functions.GetItemByName("vegetables")
+    if water ~= nil and veg ~= nil then
         cb(true)
     else
         cb(false)
     end
 end)
 
-QBCore.Functions.CreateCallback('qb-burgershot:server:get:ingredientTorpedo', function(source, cb)
+QBCore.Functions.CreateCallback('qb-pizzathis:server:get:dough', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
-    local meat = Ply.Functions.GetItemByName("burger-meat")
-    local bun = Ply.Functions.GetItemByName("burger-bun")
+    local yeast = Ply.Functions.GetItemByName("yeast")
+    local salt = Ply.Functions.GetItemByName("salt")
+	local flour = Ply.Functions.GetItemByName("flour")
     if meat ~= nil and bun ~= nil then
         cb(true)
     else
@@ -169,110 +194,15 @@ QBCore.Functions.CreateCallback('qb-burgershot:server:get:ingredientTorpedo', fu
     end
 end)
 
-QBCore.Functions.CreateCallback('qb-burgershot:server:get:ingredientMeatfree', function(source, cb)
-    local src = source
-    local Ply = QBCore.Functions.GetPlayer(src)
-    local bun = Ply.Functions.GetItemByName("burger-bun")
-    local tomato = Ply.Functions.GetItemByName("burger-tomato")
-    local lettuce = Ply.Functions.GetItemByName("burger-lettuce")
-    if bun ~= nil and lettuce ~= nil and tomato ~= nil then
-        cb(true)
-    else
-        cb(false)
-    end
-end)
 
-QBCore.Functions.CreateCallback('qb-burgershot:server:get:ingredientMurderMeal', function(source, cb)
-    local src = source
-    local Ply = QBCore.Functions.GetPlayer(src)
-    local fries = Ply.Functions.GetItemByName("burger-fries")
-    local heartstopper = Ply.Functions.GetItemByName("burger-heartstopper")
-    local software = Ply.Functions.GetItemByName("burger-softdrink")
-    if fries ~= nil and heartstopper ~= nil and software ~= nil then
-        cb(true)
-    else
-        cb(false)
-    end
-end)
+--BILLING
 
-QBCore.Functions.CreateUseableItem("burger-murdermeal", function(source, item)
-    local Player = QBCore.Functions.GetPlayer(source)
-    TriggerClientEvent("qb-burgershot:MurderMeal", source, item.name)
-end)
-
-
-
-
-RegisterNetEvent('qb-burgershot:remove:potato', function()
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-
-    Player.Functions.RemoveItem("burger-potato", 1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-potato"], "remove")
-end)
-
-RegisterNetEvent('qb-burgershot:add:fries', function()
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-
-    Player.Functions.AddItem("burger-fries", 4)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-fries"], "add")
-end)
-
-RegisterNetEvent('qb-burgershot:remove:rawpatty', function()
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-
-    Player.Functions.RemoveItem("burger-raw", 1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-raw"], "remove")
-end)
-
-RegisterNetEvent('qb-burgershot:add:burgermeat', function()
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-
-    Player.Functions.AddItem("burger-meat", 1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-meat"], "add")
-end)
-
-RegisterNetEvent('qb-burgershot:remove:sodasyrup', function()
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-
-    Player.Functions.RemoveItem("burger-sodasyrup", 1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-sodasyrup"], "remove")
-end)
-
-RegisterNetEvent('qb-burgershot:add:softdrink', function()
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-
-    Player.Functions.AddItem("burger-softdrink", 1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-softdrink"], "add")
-end)
-
-RegisterNetEvent('qb-burgershot:remove:mshakeformula', function()
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-
-    Player.Functions.RemoveItem("burger-mshakeformula", 1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-mshakeformula"], "remove")
-end)
-
-RegisterNetEvent('qb-burgershot:add:mshake', function()
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-
-    Player.Functions.AddItem("burger-mshake", 1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["burger-mshake"], "add")
-end)
-
-RegisterServerEvent("qb-burgershot:bill:player")
-AddEventHandler("qb-burgershot:bill:player", function(playerId, amount)
+RegisterServerEvent("qb-pizzathis:bill:player")
+AddEventHandler("qb-pizzathis:bill:player", function(playerId, amount)
         local biller = QBCore.Functions.GetPlayer(source)
         local billed = QBCore.Functions.GetPlayer(tonumber(playerId))
         local amount = tonumber(amount)
-        if biller.PlayerData.job.name == 'burgershot' then
+        if biller.PlayerData.job.name == 'pizzathis' then
             if billed ~= nil then
                 if biller.PlayerData.citizenid ~= billed.PlayerData.citizenid then
                     if amount and amount > 0 then
