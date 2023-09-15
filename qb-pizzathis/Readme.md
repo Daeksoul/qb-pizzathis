@@ -5,7 +5,7 @@
 - There is an option for people not using qb-target to replace the menus.lua file with the menus-notarget.lua file and uncomment lines in the config file.
 - Please ensure that the latest dependencies are used aswell as core for this in order to work.
 - This is still currently a WIP and subject to changes.
-- This is an adaption from the qb-BurgerShot script by [NAME TBC] - All kudos go to them for making the script to begin with!
+- This is an adaptation from the qb-BurgerShot script by DrB1ackBeard - All kudos go to them for making the whole script to begin with!
 
 ## Dependencies :
 

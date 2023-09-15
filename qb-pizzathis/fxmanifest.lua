@@ -1,8 +1,8 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Original script by DrB1ackBeard - Adaption by Daeksoul'
-description 'qb-burgershot for QBCore Created By DrB1ackBeard adapted by Daeksoul to be used for Pizza This! restaurant job.'
+author 'Original script by DrB1ackBeard - adaptation by Daeksoul'
+description 'qb-burgershot for QBCore Created By DrB1ackBeard adaptation by Daeksoul to be used for Pizza This! restaurant job.'
 version '1.0.0'
 
 shared_scripts {
