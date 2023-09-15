@@ -10,12 +10,19 @@
 ## Dependencies :
 
 QBCore Framework - https://github.com/qbcore-framework/qb-core
+
 PolyZone - https://github.com/mkafrin/PolyZone
+
 qb-target - https://github.com/BerkieBb/qb-target (OPTIONAL: Only needed if not using draw text)
+
 qb-input - https://github.com/qbcore-framework/qb-input
+
 qb-menu - https://github.com/qbcore-framework/qb-menu
+
 Map - Gabz 'Pizza This' MLO
+
 Car - TBA
+
 
 ## Insert into @qb-smallresources --> server --> consumables.lua
 ```
