@@ -94,7 +94,7 @@ RegisterNetEvent('qb-pizzathis:create:spaghetti-meatballs', function()
     TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["spaghetti-meatballs"], "add")
 end)
 
-RegisterNetEvent('qb-pizzathis:create:spaghetti-meatballs', function()
+RegisterNetEvent('qb-pizzathis:create:alla-vodka', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
 
