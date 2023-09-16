@@ -57,8 +57,8 @@ Citizen.CreateThread(function()
 			distance = 1.5
 	})
 
-	exports['qb-target']:AddBoxZone("pizzaoven", vector3(814.24, -752.95, 26.34), 1.8, 1.0, {
-		name="pizzaoven",
+	exports['qb-target']:AddBoxZone("pizzathisoven", vector3(814.24, -752.95, 26.34), 1.8, 1.0, {
+		name="pizzathisoven",
 		heading=34,
 		debugPoly=false,
 		minZ=26.34,
