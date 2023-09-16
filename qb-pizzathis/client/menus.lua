@@ -9,7 +9,7 @@ local onDuty = false
 
 Citizen.CreateThread(function()
 
-    exports['qb-target']:AddTargetModel('ig_floyd', {
+    exports['qb-target']:AddTargetModel('ig_talcc', {
         options = {
             {
                 type = "client",
@@ -40,44 +40,79 @@ Citizen.CreateThread(function()
 		distance = 1.5
 	})
 
-	exports['qb-target']:AddBoxZone("pizza_tray_1", vector3(810.97, -752.97, 26.54), 1.05, 1.0, {
-			name = "pizzeria_tray_1",
-			heading = 35.0,
-			debugPoly = false,
-			minZ=26.54,
-			maxZ=28.54,
-		}, {
-			options = {
-			    {
-				event = "qb-pizzathis:Tray1",
-				icon = "far fa-clipboard",
-				label = "Tray 1",
-			    },
-			},
-			distance = 1.5
-	})
+    exports['qb-target']:AddBoxZone("pizza_tray_1", vector3(810.97, -752.97, 26.54), 1.05, 1.0, {
+        name = "pizza_tray_1",
+        heading = 35.0,
+        debugPoly = false,
+        minZ=26.54,
+        maxZ=28.54,
+    }, {
+        options = {
+            {
+            event = "qb-pizzathis:Tray1",
+            icon = "far fa-clipboard",
+            label = "Tray 1",
+            },
+        },
+        distance = 1.5
+    })
 
---[[ 	exports['qb-target']:AddBoxZone("pizzathispizzaoven", vector3(814.24, -752.95, 26.34), 1.8, 1.0, {
-		name="pizzaoven",
-		heading=34,
-		debugPoly=false,
-		minZ=26.34,
-		maxZ=28.34,
-	}, {
-		options = {
-			{
-				event = "qb-pizzathis:PizzaOven",
-				icon = "fa-solid fa-fire-burner",
-				label = "Pizza Oven",
-				job = Config.Job,
-			},
-		},
-		distance = 1.5
-	}) ]]
+--[[ 	exports['qb-target']:AddBoxZone("pizza_tray_2", vector3(-1193.87, -894.38, 14.0), 0.5, 0.7, {
+    name="pizza_tray_2",
+    heading=318,
+    debugPoly=false,
+    minZ=14.0,
+    maxZ=14.4,
+}, {
+    options = {
+        {
+        event = "qb-pizzathis:Tray2",
+        icon = "far fa-clipboard",
+        label = "Tray 2",
+        },
+    },
+    distance = 1.5
+})
 
-    --SAVED FOR FUTURE USE WITH EXTRA GOODS TO BE COOKED IN KITCHEN
---[[ 	exports['qb-target']:AddBoxZone("burgershotcooker2 ", vector3(-1202.94, -897.38, 14.0), 1.7, 1, {
-		name="burgershotcooker2 ",
+exports['qb-target']:AddBoxZone("pizza_tray_3", vector3(-1193.88, -906.98, 14.0), 1, 1, {
+    name="pizza_tray_3",
+    heading=350,
+    debugPoly=false,
+    minZ=13.2,
+    maxZ=14.2,
+}, {
+    options = {
+        {
+        event = "qb-pizzathis:Tray3",
+        icon = "far fa-clipboard",
+        label = "Tray 3",
+        },
+    },
+    distance = 3.5
+}) ]]
+
+---CONFIRM LOCATION / POSSIBLY AMEND COORDS TO COOKER/OVEN IN THE KITCHEN?
+exports['qb-target']:AddBoxZone("pizzathiscooker", vector3(814.24, -752.95, 26.34), 1.8, 1.0, {
+    name="pizzathiscooker",
+    heading=34,
+    debugPoly=false,
+    minZ=26.34,
+    maxZ=28.34,
+}, {
+    options = {
+        {
+            event = "qb-pizzathis:PattyFry",
+            icon = "fas fa-hamburger",
+            label = "Burger Cook Station",
+            job = Config.Job,
+        },
+    },
+    distance = 1.5
+})
+
+    --POSSIBLY AMEND COORDS TO COOKER/OVEN IN THE KITCHEN?
+--[[ 	exports['qb-target']:AddBoxZone("pizzathiscooker2 ", vector3(-1202.94, -897.38, 14.0), 1.7, 1, {
+		name="pizzathiscooker2 ",
 		heading=34,
 		debugPoly=false,
 		minZ=13.0,
@@ -95,12 +130,12 @@ Citizen.CreateThread(function()
 	}) ]]
 
     --SAVED FOR FUTURE USE WITH FRIED GOODS
---[[ 		exports['qb-target']:AddBoxZone("pizzeriafryer", vector3(807.66, -761.21, 26.78), 2.5, 1.5, {
-		name="pizzeriafryer",
+    exports['qb-target']:AddBoxZone("pizzathisfryer", vector3(807.66, -761.21, 26.78), 2.5, 1.5, {
+		name="pizzathisfryer",
 		heading=35,
 		debugPoly=false,
-		minZ=13.0,
-		maxZ=14.4,
+		minZ=26.78,
+		maxZ=28.78,
 		}, {
 		    options = {
 			{
@@ -111,125 +146,251 @@ Citizen.CreateThread(function()
 			},
 		    },
 		    distance = 1.5
-		}) ]]
+		})
 
 
-	exports['qb-target']:AddBoxZone("pizzeriadrinks", vector3(813.48, -749.32, 26.78), 2.2, 0.6, {
-	    name="pizzeriadrinks",
-	    heading=34,
-	    debugPoly=false,
-	    minZ=13.8,
-	    maxZ=14.8,
-	    }, {
-		options = {
-		    {
-			event = "qb-pizzathis-menu:DrinkMenu",
-			icon = "fas fa-filter",
-			label = "Make Some Drinks",
-			job = Config.Job,
-		    },
-		},
-		distance = 1.5
-	 })
-
-         exports['qb-target']:AddBoxZone("pizzeriafridge", vector3(806.2, -761.67, 26.78), 1.6, 1, {
-            name="pizzeriafridge",
-            heading=35,
-            debugPoly=false,
-            minZ=26.78,
-            maxZ=28.78,
-        }, {
-                options = {
-                    {
-                        event = "qb-pizzathis-menu:OrderMenu",
-                        icon = "fas fa-laptop",
-                        label = "Order Ingredients!",
-                        job = Config.Job,
-                    },
-                },
-                distance = 1.5
-    })
-
-        exports['qb-target']:AddBoxZone("pizzeriadisplay", vector3(812.13, -754.89, 26.78), 4.6, 1.2, {
-            name="pizzeriadisplay",
+    exports['qb-target']:AddBoxZone("pizzathisdrinks", vector3(813.48, -749.32, 26.78), 2.2, 0.6, {
+            name="pizzathisdrinks",
             heading=34,
             debugPoly=false,
             minZ=26.78,
             maxZ=28.78,
-        }, {
-                options = {
-                    {
-                        event = "qb-pizzathis:Storage",
-                        icon = "fas fa-box",
-                        label = "Storage",
-                        job = Config.Job,
-                    },
+            }, {
+            options = {
+                {
+                event = "qb-pizzathis-menu:DrinkMenu",
+                icon = "fas fa-filter",
+                label = "Make Some Drinks",
+                job = Config.Job,
                 },
-                distance = 1.5
+            },
+            distance = 1.5
             })
-
-
-            -----NEED TO FIGURE OUT WHAT THIS IS/DOES
-        exports['qb-target']:AddBoxZone("craftfood", vector3(814.24, -752.95, 26.34), 1.8, 0.7, {
-            name="craftfood",
-            heading=304,
-            debugPoly=false,
-            minZ=26.78,
-            maxZ=28.78,
-        }, {
-                options = {
-                    {
-                        event = "qb-pizzathis-menu:Food",
-                        icon = "fa-solid fa-pizza-slice",
-                        label = "Work Station",
-                        job = Config.Job,
+    
+--[[         exports['qb-target']:AddBoxZone("pizzathisdrinks2", vector3(-1189.08, -905.28, 14.0), 1.15, 0.7, {
+                name="pizzathisdrinks2",
+                heading=33,
+                debugPoly=false,
+                minZ=13.8,
+                maxZ=14.8,
+                }, {
+                    options = {
+                        {
+                            event = "qb-pizzathis-menu:DrinkMenu",
+                            icon = "fas fa-filter",
+                            label = "Make Some Drinks",
+                            job = Config.Job,
+                        },
                     },
+                    distance = 1.5
+                }) ]]
+
+     exports['qb-target']:AddBoxZone("pizzeriafridge", vector3(806.2, -761.67, 26.78), 1.6, 1, {
+        name="pizzeriafridge",
+        heading=35,
+        debugPoly=false,
+        minZ=26.78,
+        maxZ=28.78,
+    }, {
+            options = {
+                {
+                    event = "qb-pizzathis-menu:OrderMenu",
+                    icon = "fas fa-laptop",
+                    label = "Order Ingredients!",
+                    job = Config.Job,
                 },
-                distance = 1.5
-     })
+            },
+            distance = 1.5
+        })
+
+    exports['qb-target']:AddBoxZone("pizzathisdisplay", vector3(812.13, -754.89, 26.78), 4.6, 1.2, {
+        name="pizzathisdisplay",
+        heading=34,
+        debugPoly=false,
+        minZ=26.78,
+        maxZ=28.78,
+    }, {
+            options = {
+                {
+                    event = "qb-pizzathis:Storage",
+                    icon = "fas fa-box",
+                    label = "Storage",
+                    job = Config.Job,
+                },
+            },
+            distance = 1.5
+        })
 
 
-        exports['qb-target']:AddBoxZone("Pizzeria_register_1", vector3(811.5, -752.03, 26.4), 0.5, 0.4, {
-            name="Pizzeria_register_1",
-            debugPoly=false,
-            heading=125,
-            minZ=26.4,
-            maxZ=28.4,
-        }, {
-                options = {
-                    {
-                        event = "qb-pizzathis:bill",
-                        parms = "1",
-                        icon = "fas fa-credit-card",
-                        label = "Charge Customer",
-                        job = Config.Job,
+            exports['qb-target']:AddBoxZone("craftburger", vector3(814.24, -752.95, 26.34), 1.8, 0.7, {
+                name="craftburger",
+                heading=304,
+                debugPoly=false,
+                minZ=26.78,
+                maxZ=28.78,
+            }, {
+                    options = {
+                        {
+                            event = "qb-pizzathis-menu:Burgers",
+                            icon = "fas fa-cheeseburger",
+                            label = "Burger Work Station",
+                            job = Config.Job,
+                        },
                     },
-                },
-                distance = 1.5
-     })
-
-        exports['qb-target']:AddBoxZone("Pizzeria_register_2", vector3(811.36, -750.7, 26.1), 0.6, 0.5, {
-            name="Pizzeria_register_2",
-            debugPoly=false,
-            heading=302,
-            minZ=26.1,
-            maxZ=28.1,
+                    distance = 1.5
+                })
+    
+    
+            exports['qb-target']:AddBoxZone("PizzaThis_register_1", vector3(811.5, -752.03, 26.4), 0.5, 0.4, {
+                name="PizzaThis_register_1",
+                debugPoly=false,
+                heading=125,
+                minZ=26.4,
+                maxZ=28.4,
             }, {
                     options = {
                         {
                             event = "qb-pizzathis:bill",
-                            parms = "2",
+                            parms = "1",
                             icon = "fas fa-credit-card",
                             label = "Charge Customer",
                             job = Config.Job,
                         },
                     },
                     distance = 1.5
-     })  
-end)
+                })
+    
+            exports['qb-target']:AddBoxZone("PizzaThis_register_2", vector3(811.36, -750.7, 26.1), 0.6, 0.5, {
+                name="PizzaThis_register_2",
+                debugPoly=false,
+                heading=302,
+                minZ=26.1,
+                maxZ=28.1,
+                }, {
+                        options = {
+                            {
+                                event = "qb-pizzathis:bill",
+                                parms = "2",
+                                icon = "fas fa-credit-card",
+                                label = "Charge Customer",
+                                job = Config.Job,
+                            },
+                        },
+                        distance = 1.5
+                    })  
+    
+    
+    --[[         exports['qb-target']:AddBoxZone("PizzaThis_register_3", vector3(-1193.39, -895.22, 14.0), 0.6, 0.4, {
+                name="PizzaThis_register_3",
+                debugPoly=false,
+                heading=125,
+                minZ=14.0,
+                maxZ=14.4,
+                        }, {
+                                options = {
+                                    {
+                                        event = "qb-pizzathis:bill",
+                                        parms = "3",
+                                        icon = "fas fa-credit-card",
+                                        label = "Charge Customer",
+                                        job = Config.Job,
+                                    },
+                                },
+                                distance = 1.5
+                            })  
+    
+    
+    
+    
+            exports['qb-target']:AddBoxZone("PizzaThis_register_4", vector3(-1192.52, -906.65, 14.0), 0.5, 0.5, {
+                name="PizzaThis_register_4",
+                heading=0,
+                debugPoly=false,
+                minZ=13.8,
+                maxZ=14.2,
+                    }, {
+                            options = {
+                                {
+                                    event = "qb-pizzathis:bill",
+                                    parms = "4",
+                                    icon = "fas fa-credit-card",
+                                    label = "Charge Customer",
+                                    job = Config.Job,
+                                },
+                            },
+                            distance = 1.5
+                }) ]]
+    
+    end)
 
 
 -- QB-MENU --
+
+RegisterNetEvent('qb-pizzathis-menu:Burgers', function(data)
+    exports['qb-menu']:openMenu({
+        {
+            
+            header = "| Available Food Items |",
+            isMenuHeader = true, -- Set to true to make a nonclickable title
+        },
+        {
+            
+            header = "• Moneyshot Burger",
+            txt = "Bun , Cooked Patty , Tomato , Lettuce",
+            params = {
+                event = "qb-pizzathis:MoneyShot"
+            }
+        },
+        {
+            
+            header = "• Meat Free Burger",
+            txt = "Bun , Tomato , Lettuce",
+            params = {
+                event = "qb-pizzathis:MeatFree"
+            }
+        },
+        {
+            
+            header = "• Bleeder Burger",
+            txt = "Bun , Cooked Patty , Tomato , Lettuce",
+            params = {
+                event = "qb-pizzathis:BleederBurger"
+            }
+        },
+        {
+            
+            header = "• The Heart Stopper",
+            txt = "Bun , Cooked Patty , Tomato , Lettuce",
+            params = {
+                event = "qb-pizzathis:HeartStopper"
+            }
+        },
+        {
+            
+            header = "• Torpedo Roll",
+            txt = "Bun , Cooked Meat",
+            params = {
+                event = "qb-pizzathis:Torpedo"
+            }
+        },
+        {
+            
+            header = "• Murder Meal",
+            txt = "The Heart Stopper, Fries and SoftDrink",
+            params = {
+                event = "qb-pizzathis:CreateMurderMeal"
+            }
+        },
+        {
+            id = 7,
+            header = "Close (ESC)",
+            isMenuHeader = true, -- Set to true to make a nonclickable title
+        },
+    })
+end)
+
+
+--LEAVING THIS HERE FOR FUTURE REFERENCE
 
 --[[ RegisterNetEvent('qb-pizzathis-menu:PizzeriaOven', function(data)
     exports['qb-menu']:openMenu({
@@ -302,72 +463,6 @@ end)
     })
 end) ]]
 
-
-----TESTING TO SEE IF SCRIPT WORKS OR NOT AS ABOVE IS NOT TRIGGERING
-
-RegisterNetEvent('qb-pizzathis-menu:Food', function(data)
-    exports['qb-menu']:openMenu({
-        {
-            
-            header = "| Available Food |",
-            isMenuHeader = true, -- Set to true to make a nonclickable title
-        },
-        {
-            
-            header = "• Moneyshot Burger",
-            txt = "Bun , Cooked Patty , Tomato , Lettuce",
-            params = {
-                event = "qb-burgershot:MoneyShot"
-            }
-        },
-        {
-            
-            header = "• Meat Free Burger",
-            txt = "Bun , Tomato , Lettuce",
-            params = {
-                event = "qb-burgershot:MeatFree"
-            }
-        },
-        {
-            
-            header = "• Bleeder Burger",
-            txt = "Bun , Cooked Patty , Tomato , Lettuce",
-            params = {
-                event = "qb-burgershot:BleederBurger"
-            }
-        },
-        {
-            
-            header = "• The Heart Stopper",
-            txt = "Bun , Cooked Patty , Tomato , Lettuce",
-            params = {
-                event = "qb-burgershot:HeartStopper"
-            }
-        },
-        {
-            
-            header = "• Torpedo Roll",
-            txt = "Bun , Cooked Meat",
-            params = {
-                event = "qb-burgershot:Torpedo"
-            }
-        },
-        {
-            
-            header = "• Murder Meal",
-            txt = "The Heart Stopper, Fries and SoftDrink",
-            params = {
-                event = "qb-burgershot:CreateMurderMeal"
-            }
-        },
-        {
-            id = 7,
-            header = "Close (ESC)",
-            isMenuHeader = true, -- Set to true to make a nonclickable title
-        },
-    })
-end)
-
 RegisterNetEvent('qb-pizzathis-menu:OrderMenu', function(data)
     exports['qb-menu']:openMenu({
         {
@@ -402,8 +497,24 @@ RegisterNetEvent('qb-pizzathis-menu:DrinkMenu', function(data)
     exports['qb-menu']:openMenu({
         {
             id = 0,
-            header = "| Drinks Menu |",
+            header = "| Drink Menu |",
             isMenuHeader = true, -- Set to true to make a nonclickable title
+        },
+        {
+            
+            header = "• Soft Drink",
+            txt = "Fizzy Soda Drink",
+            params = {
+                event = "qb-pizzathis:SoftDrink"
+            }
+        },
+        {
+            
+            header = "• Milkshake",
+            txt = "Milkshake Formula",
+            params = {
+                event = "qb-pizzathis:mShake"
+            }
         },
         {
             
@@ -411,14 +522,6 @@ RegisterNetEvent('qb-pizzathis-menu:DrinkMenu', function(data)
             txt = "bo'ohw'o'wo'er, innit bruv",
             params = {
                 event = "qb-pizzathis:water_bottle"
-            }
-        },
-        {
-            
-            header = "• Soda",
-            txt = "Fizzy Soda Drink",
-            params = {
-                event = "qb-pizzathis:sodacup"
             }
         },
         {

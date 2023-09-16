@@ -9,7 +9,8 @@ Config.GaragePedLocations = {
 Config.CarSpawnLocation = vector4(808.75, -737.97, 27.61, 78.37)
 
 
---ONLY UNCOMMENT IF YOU ARE NOT USING QB-TARGET
+--if u are not using qb-target uncomment this.
+
 -- Config.Locations = {
 --     ["duty"] = {
 --         [1] = vector4(0 , 0 , 0, 0),
@@ -57,12 +58,12 @@ Config.CarSpawnLocation = vector4(808.75, -737.97, 27.61, 78.37)
 
 Config.Items = {
 label = "Shop",
-    slots = 17,
+    slots = 14,
     items = {
         [1] = {
             name = "water_bottle",
             price = 0,
-            amount = 5,
+            amount = 10,
             info = {},
             type = "item",
             slot = 1,
@@ -70,7 +71,7 @@ label = "Shop",
         [2] = {
             name = "vegetables",
             price = 0,
-            amount = 5,
+            amount = 10,
             info = {},
             type = "item",
             slot = 2,
@@ -78,7 +79,7 @@ label = "Shop",
         [3] = {
             name = "eggs",
             price = 0,
-            amount = 5,
+            amount = 10,
             info = {},
             type = "item",
             slot = 3,
@@ -86,7 +87,7 @@ label = "Shop",
         [4] = {
             name = "groundcoffee",
             price = 0,
-            amount = 5,
+            amount = 10,
             info = {},
             type = "item",
             slot = 4,
@@ -94,106 +95,131 @@ label = "Shop",
         [5] = {
             name = "dairyproducts",
             price = 0,
-            amount = 5,
+            amount = 10,
             info = {},
             type = "item",
             slot = 5,
         },
         [6] = {
-            name = "chocolateproducts",
+            name = "burger-mshakeformula",
             price = 0,
-            amount = 5,
+            amount = 10,
             info = {},
             type = "item",
             slot = 6,
         },
         [7] = {
-            name = "ladyfingers",
+            name = "burger-sodasyrup",
             price = 0,
-            amount = 5,
+            amount = 10,
             info = {},
             type = "item",
             slot = 7,
         },
-	[8] = {
-            name = "squid",
+        [8] = {
+            name = "chocolateproducts",
             price = 0,
-            amount = 5,
+            amount = 10,
             info = {},
             type = "item",
             slot = 8,
         },
-	[9] = {
-            name = "spaghetti",
+        [9] = {
+            name = "ladyfingers",
             price = 0,
-            amount = 5,
+            amount = 10,
             info = {},
             type = "item",
             slot = 9,
         },
-	[10] = {
-            name = "mincebeef",
+        [10] = {
+            name = "squid",
             price = 0,
-            amount = 5,
+            amount = 10,
             info = {},
             type = "item",
             slot = 10,
         },
-	[11] = {
-            name = "vodka",
+        [11] = {
+            name = "spaghetti",
             price = 0,
-            amount = 5,
+            amount = 10,
             info = {},
             type = "item",
             slot = 11,
         },
-	[12] = {
-            name = "dough",
+        [12] = {
+            name = "mincebeef",
             price = 0,
-            amount = 5,
+            amount = 10,
             info = {},
             type = "item",
             slot = 12,
         },
-	[13] = {
-            name = "cheese",
+        [13] = {
+            name = "burger-potato",
             price = 0,
-            amount = 5,
+            amount = 10,
             info = {},
             type = "item",
             slot = 13,
         },
-	[14] = {
-            name = "salami",
+        [14] = {
+            name = "ladyfingers",
             price = 0,
-            amount = 5,
+            amount = 10,
             info = {},
             type = "item",
             slot = 14,
         },
-	[15] = {
-            name = "yeast",
+--[[
+        [15] = {
+            name = "ladyfingers",
             price = 0,
-            amount = 5,
+            amount = 10,
             info = {},
             type = "item",
             slot = 15,
         },
-	[16] = {
-            name = "salt",
+        [16] = {
+            name = "ladyfingers",
             price = 0,
-            amount = 5,
+            amount = 10,
             info = {},
             type = "item",
             slot = 16,
         },
-	[17] = {
-            name = "flour",
+        [17] = {
+            name = "ladyfingers",
             price = 0,
-            amount = 5,
+            amount = 10,
             info = {},
             type = "item",
             slot = 17,
         },
+         [18] = {
+            name = "ladyfingers",
+            price = 0,
+            amount = 10,
+            info = {},
+            type = "item",
+            slot = 18,
+        },       
+        [19] = {
+            name = "salt",
+            price = 0,
+            amount = 10,
+            info = {},
+            type = "item",
+            slot = 19,
+        },
+        [20] = {
+            name = "flour",
+            price = 0,
+            amount = 10,
+            info = {},
+            type = "item",
+            slot = 20,
+        }, ]]
     }
 }

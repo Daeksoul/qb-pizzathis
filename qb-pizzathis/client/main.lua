@@ -39,7 +39,7 @@ RegisterNetEvent('QBCore:Client:SetDuty', function(duty)
 end)
 
 Citizen.CreateThread(function()
-    PizzaThis = AddBlipForCoord(-1197.32, -897.655, 13.995)
+    PizzaThis = AddBlipForCoord(804.21, -747.59, 26.78)
     SetBlipSprite (PizzaThis, 106)
     SetBlipDisplay(PizzaThis, 4)
     SetBlipScale  (PizzaThis, 0.5)
@@ -94,16 +94,16 @@ RegisterNetEvent("qb-pizzathis:Storage2", function()
     })
 end)
 
---POSSIBLE FUTURE 'MEAL DEAL' CREATIONS??
--- RegisterNetEvent("qb-pizzathis:MurderMeal", function()
-		-- TriggerServerEvent('qb-pizzathis:open:murdermeal')
--- end)
+--Meal Creations
+RegisterNetEvent("qb-pizzathis:MurderMeal", function()
+		TriggerServerEvent('qb-pizzathis:open:murdermeal')
+end)
 
-RegisterNetEvent("qb-pizzathis:tiramisu", function()
+RegisterNetEvent("qb-pizzathis:CreateMurderMeal", function()
     if onDuty then
-    	QBCore.Functions.TriggerCallback('qb-pizzathis:server:get:tiramisu', function(HasItems)  
+    	QBCore.Functions.TriggerCallback('qb-pizzathis:server:get:ingredientMurderMeal', function(HasItems)  
     		if HasItems then
-				QBCore.Functions.Progressbar("pickup_sla", "Making Tiramisu..", 4000, false, false, {
+				QBCore.Functions.Progressbar("pickup_sla", "Making A Murder Meal..", 4000, false, false, {
 					disableMovement = true,
 					disableCarMovement = true,
 					disableMouse = false,
@@ -113,8 +113,8 @@ RegisterNetEvent("qb-pizzathis:tiramisu", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function()
-					TriggerServerEvent('qb-pizzathis:create:tiramisu')
-                    QBCore.Functions.Notify("You made Tiramisu", "success")
+					TriggerServerEvent('qb-pizzathis:create:murdermeal')
+                    QBCore.Functions.Notify("You made a A Murder Meal", "success")
 				end, function()
 					QBCore.Functions.Notify("Cancelled..", "error")
 				end)
@@ -127,11 +127,11 @@ RegisterNetEvent("qb-pizzathis:tiramisu", function()
 	end
 end)
 
-RegisterNetEvent("qb-pizzathis:calamri-marinara", function()
+RegisterNetEvent("qb-pizzathis:BleederBurger", function()
     if onDuty then
-    	QBCore.Functions.TriggerCallback('qb-pizzathis:server:get:calamri-marinara', function(HasItems)  
+    	QBCore.Functions.TriggerCallback('qb-pizzathis:server:get:ingredientBurger', function(HasItems)  
     		if HasItems then
-				QBCore.Functions.Progressbar("pickup_sla", "Making Calamri Marinara..", 4000, false, false, {
+				QBCore.Functions.Progressbar("pickup_sla", "Making Burgers..", 4000, false, false, {
 					disableMovement = true,
 					disableCarMovement = true,
 					disableMouse = false,
@@ -141,8 +141,8 @@ RegisterNetEvent("qb-pizzathis:calamri-marinara", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function()
-					TriggerServerEvent('qb-pizzathis:create:calamri-marinara')
-                    QBCore.Functions.Notify("You made Calamri Marinara", "success")
+					TriggerServerEvent('qb-pizzathis:create:burgerbleeder')
+                    QBCore.Functions.Notify("You made a Bleeder Burger", "success")
 				end, function()
 					QBCore.Functions.Notify("Cancelled..", "error")
 				end)
@@ -155,11 +155,11 @@ RegisterNetEvent("qb-pizzathis:calamri-marinara", function()
 	end
 end)
 
-RegisterNetEvent("qb-pizzathis:spaghetti-meatballs", function()
+RegisterNetEvent("qb-pizzathis:MoneyShot", function()
     if onDuty then
-    	QBCore.Functions.TriggerCallback('qb-pizzathis:server:get:spaghetti-meatballs', function(HasItems)  
+    	QBCore.Functions.TriggerCallback('qb-pizzathis:server:get:ingredientBurger', function(HasItems)  
     		if HasItems then
-				QBCore.Functions.Progressbar("pickup_sla", "Making Spaghetti Meatballs..", 4000, false, false, {
+				QBCore.Functions.Progressbar("pickup_sla", "Making Burgers..", 4000, false, false, {
 					disableMovement = true,
 					disableCarMovement = true,
 					disableMouse = false,
@@ -169,8 +169,8 @@ RegisterNetEvent("qb-pizzathis:spaghetti-meatballs", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function()
-					TriggerServerEvent('qb-pizzathis:create:spaghetti-meatballs')
-           			QBCore.Functions.Notify("You made Spaghetti Meatballs", "success")
+					TriggerServerEvent('qb-pizzathis:create:burgermoneyshot')
+           			QBCore.Functions.Notify("You made a MoneyShot Burger", "success")
 				end, function()
 					QBCore.Functions.Notify("Cancelled..", "error")
 				end)
@@ -183,11 +183,11 @@ RegisterNetEvent("qb-pizzathis:spaghetti-meatballs", function()
 	end
 end)
 
-RegisterNetEvent("qb-pizzathis:alla-vodka", function()
+RegisterNetEvent("qb-pizzathis:HeartStopper", function()
     if onDuty then
-    	QBCore.Functions.TriggerCallback('qb-pizzathis:server:get:alla-vodka', function(HasItems)  
+    	QBCore.Functions.TriggerCallback('qb-pizzathis:server:get:ingredientBurger', function(HasItems)  
     		if HasItems then
-				QBCore.Functions.Progressbar("pickup_sla", "Making Pasta Alla Vodka..", 4000, false, false, {
+				QBCore.Functions.Progressbar("pickup_sla", "Making Burgers..", 4000, false, false, {
 					disableMovement = true,
 					disableCarMovement = true,
 					disableMouse = false,
@@ -197,8 +197,8 @@ RegisterNetEvent("qb-pizzathis:alla-vodka", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function()
-					TriggerServerEvent('qb-pizzathis:create:alla-vodka')
-           			QBCore.Functions.Notify("You made Pasta Alla Vodka", "success")
+					TriggerServerEvent('qb-pizzathis:create:burgerheartstopper')
+           			QBCore.Functions.Notify("You made a Heart Stopper", "success")
 				end, function()
 					QBCore.Functions.Notify("Cancelled..", "error")
 				end)
@@ -211,11 +211,11 @@ RegisterNetEvent("qb-pizzathis:alla-vodka", function()
 	end
 end)
 
-RegisterNetEvent("qb-pizzathis:cheese-pizza", function()
+RegisterNetEvent("qb-pizzathis:Torpedo", function()
     if onDuty then
-    	QBCore.Functions.TriggerCallback('qb-pizzathis:server:get:cheese-pizza', function(HasItems)  
+    	QBCore.Functions.TriggerCallback('qb-pizzathis:server:get:ingredientTorpedo', function(HasItems)  
     		if HasItems then
-				QBCore.Functions.Progressbar("pickup_sla", "Making A Cheese Pizza..", 4000, false, false, {
+				QBCore.Functions.Progressbar("pickup_sla", "Making A Torpedo..", 4000, false, false, {
 					disableMovement = true,
 					disableCarMovement = true,
 					disableMouse = false,
@@ -225,8 +225,8 @@ RegisterNetEvent("qb-pizzathis:cheese-pizza", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function()
-					TriggerServerEvent('qb-pizzathis:create:cheese-pizza')
-           			QBCore.Functions.Notify("You made a Cheese Pizza", "success")
+					TriggerServerEvent('qb-pizzathis:create:torpedo')
+           			QBCore.Functions.Notify("You made a Torpedo Roll", "success")
 				end, function()
 					QBCore.Functions.Notify("Cancelled..", "error")
 				end)
@@ -239,11 +239,11 @@ RegisterNetEvent("qb-pizzathis:cheese-pizza", function()
 	end  
 end)
 
-RegisterNetEvent("qb-pizzathis:diavola-pizza", function()
+RegisterNetEvent("qb-pizzathis:MeatFree", function()
     if onDuty then
-    	QBCore.Functions.TriggerCallback('qb-pizzathis:server:get:diavola-pizza', function(HasItems)  
+    	QBCore.Functions.TriggerCallback('qb-pizzathis:server:get:ingredientMeatfree', function(HasItems)  
     		if HasItems then
-				QBCore.Functions.Progressbar("pickup_sla", "Making A Diavola Pizza..", 4000, false, false, {
+				QBCore.Functions.Progressbar("pickup_sla", "Making A Meat Free Burger..", 4000, false, false, {
 					disableMovement = true,
 					disableCarMovement = true,
 					disableMouse = false,
@@ -253,8 +253,8 @@ RegisterNetEvent("qb-pizzathis:diavola-pizza", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function()
-					TriggerServerEvent('qb-pizzathis:create:diavola-pizza')
-                   	QBCore.Functions.Notify("You made a Diavola Pizza", "success")
+					TriggerServerEvent('qb-pizzathis:create:burgermeatfree')
+                   	QBCore.Functions.Notify("You made a Meat Free Burger", "success")
 				end, function()
 					QBCore.Functions.Notify("Cancelled..", "error")
 				end)
@@ -267,113 +267,136 @@ RegisterNetEvent("qb-pizzathis:diavola-pizza", function()
 	end  
 end)
 
-RegisterNetEvent("qb-pizzathis:vegetarian-pizza", function()
+RegisterNetEvent("qb-pizzathis:SoftDrink", function()
     if onDuty then
-    	QBCore.Functions.TriggerCallback('qb-pizzathis:server:get:vegetarian-pizza', function(HasItems)  
-    		if HasItems then
-				QBCore.Functions.Progressbar("pickup_sla", "Making A Vegetarian Pizza..", 4000, false, false, {
-					disableMovement = true,
-					disableCarMovement = true,
-					disableMouse = false,
-					disableCombat = true,
-				}, {
-					animDict = "mp_common",
-					anim = "givetake1_a",
-					flags = 8,
-				}, {}, {}, function()
-					TriggerServerEvent('qb-pizzathis:create:vegetarian-pizza')
-                   	QBCore.Functions.Notify("You made a Vegetarian Pizza", "success")
-				end, function()
-					QBCore.Functions.Notify("Cancelled..", "error")
-				end)
-			else
-   				QBCore.Functions.Notify("You dont have the ingredients to make this", "error")
-			end
-		end)
-	else 
-		QBCore.Functions.Notify("You must be Clocked into work", "error")
-	end  
+		local HasItem = QBCore.Functions.HasItem("burger-sodasyrup")
+        if HasItem then
+           MakeSoftDrink()
+        else
+            QBCore.Functions.Notify("You don't have any soda syrup..", "error")
+        end
+    else
+        QBCore.Functions.Notify("You must be Clocked into work", "error")
+    end
 end)
 
---POSSIBLE FUTURE SIDES??
--- RegisterNetEvent("qb-pizzathis:Wedges", function()
-    -- if onDuty then
-		-- local HasItem = QBCore.Functions.HasItem("potato")
-        -- if HasItem then
-           -- MakeFries()
-        -- else
-            -- QBCore.Functions.Notify("You don't have any potatoes..", "error")
-        -- end
-    -- else
-        -- QBCore.Functions.Notify("You must be Clocked into work", "error")
-    -- end
--- end)
--- RegisterNetEvent("qb-pizzathis:CheeseSticks", function()
-    -- if onDuty then
-		-- local HasItem = QBCore.Functions.HasItems("cheese-sticks")
-        -- if HasItems then
-           -- MakeFries()
-        -- else
-            -- QBCore.Functions.Notify("You don't have the ingredients..", "error")
-        -- end
-    -- else
-        -- QBCore.Functions.Notify("You must be Clocked into work", "error")
-    -- end
--- end)
+RegisterNetEvent("qb-pizzathis:mShake", function()
+    if onDuty then
+	local HasItem = QBCore.Functions.HasItem("burger-mshakeformula")
+        if HasItem then
+           MakeMShake()
+        else
+            QBCore.Functions.Notify("You don't have any Milkshake Formula..", "error")
+        end
+    else
+        QBCore.Functions.Notify("You must be Clocked into work", "error")
+    end
+end)
 
+RegisterNetEvent("qb-pizzathis:Fries", function()
+    if onDuty then
+		local HasItem = QBCore.Functions.HasItem("burger-potato")
+        if HasItem then
+           MakeFries()
+        else
+            QBCore.Functions.Notify("You don't have any potatoes..", "error")
+        end
+    else
+        QBCore.Functions.Notify("You must be Clocked into work", "error")
+    end
+end)
+
+
+RegisterNetEvent("qb-pizzathis:PattyFry", function()
+    if onDuty then
+	local HasItem = QBCore.Functions.HasItem("burger-raw")
+        if HasItem then
+           MakePatty()
+        else
+            QBCore.Functions.Notify("You don't have any raw patties..", "error")
+        end
+    else
+        QBCore.Functions.Notify("You must be Clocked into work", "error")
+    end
+end)
 
 -- Functions --
-function MakeDough()
-	TriggerServerEvent('qb-pizzathis:remove:yeast')
-	TriggerServerEvent('qb-pizzathis:remove:salt')
-	TriggerServerEvent('qb-pizzathis:remove:flour')
-	QBCore.Functions.Progressbar("pickup", "Kneading Dough..", 4000, false, false, {
+function MakeFries()
+	TriggerServerEvent('qb-pizzathis:remove:potato')
+	QBCore.Functions.Progressbar("pickup", "Frying the fries..", 4000, false, false, {
 	    disableMovement = true,
 	    disableCarMovement = true,
 	    disableMouse = false,
 	    disableCombat = true,
 	},{
-	    animDict = "mini@repair",
-	    anim = "fixing_a_player",
+	    animDict = "amb@prop_human_bbq@male@base",
+	    anim = "base",
 	    flags = 8,
 	    }, {
-		-- model = "prop_cs_fork",
-		-- bone = 28422,
-		-- coords = vector3(-0.005, 0.00, 0.00),
-		-- rotation = vector3(175.0, 160.0, 0.0),
+		model = "prop_cs_fork",
+		bone = 28422,
+		coords = vector3(-0.005, 0.00, 0.00),
+		rotation = vector3(175.0, 160.0, 0.0),
 	    }
 	)
 	Citizen.Wait(4000)
-	TriggerServerEvent('qb-pizzathis:add:dough')
-	QBCore.Functions.Notify("You made Pizza Dough", "success")
-	StopAnimTask(PlayerPedId(), "mini@repair", "fixing_a_player", 1.0)
+	TriggerServerEvent('qb-pizzathis:add:fries')
+	QBCore.Functions.Notify("You made 4 fries", "success")
+	StopAnimTask(PlayerPedId(), "amb@prop_human_bbq@male@base", "base", 1.0)
 end
 
 
-function MakeSauce()
-	TriggerServerEvent('qb-pizzathis:remove:water_bottle')
-	TriggerServerEvent('qb-pizzathis:remove:vegetables')
-    QBCore.Functions.Progressbar("pickup", "Making the Sauce..", 4000, false, false, {
+function MakePatty()
+	TriggerServerEvent('qb-pizzathis:remove:rawpatty')
+    QBCore.Functions.Progressbar("pickup", "Cooking the Patty..", 4000, false, false, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
         disableCombat = true,
     },{
-        animDict = "mini@repair",
-        anim = "fixing_a_player",
+        animDict = "amb@prop_human_bbq@male@base",
+        anim = "base",
         flags = 8,
     }, {
-        -- model = "prop_cs_fork",
-        -- bone = 28422,
-        -- coords = vector3(-0.005, 0.00, 0.00),
-        -- rotation = vector3(175.0, 160.0, 0.0),
+        model = "prop_cs_fork",
+        bone = 28422,
+        coords = vector3(-0.005, 0.00, 0.00),
+        rotation = vector3(175.0, 160.0, 0.0),
     }    
 )
     Citizen.Wait(4000)
-	TriggerServerEvent('qb-pizzathis:add:sauce')
+	TriggerServerEvent('qb-pizzathis:add:burgermeat')
     QBCore.Functions.Notify("You cooked the meat", "success")
-    StopAnimTask(PlayerPedId(), "mini@repair", "fixing_a_player", 1.0)
+    StopAnimTask(PlayerPedId(), "amb@prop_human_bbq@male@base", "base", 1.0)
 end
+
+function MakeSoftDrink()
+	TriggerServerEvent('qb-pizzathis:remove:sodasyrup')
+    QBCore.Functions.Progressbar("pickup", "Filling a cup..", 4000, false, false, {
+        disableMovement = true,
+        disableCarMovement = false,
+        disableMouse = false,
+        disableCombat = false,
+    })
+    Citizen.Wait(4000)
+	TriggerServerEvent('qb-pizzathis:add:softdrink')
+    QBCore.Functions.Notify("You made a Soda", "success")
+end  
+
+
+function MakeMShake()
+	TriggerServerEvent('qb-pizzathis:remove:mshakeformula')
+    Player.Functions.RemoveItem("burger-mshakeformula", 1)
+    QBCore.Functions.Progressbar("pickup", "Filling up a cup..", 4000, false, false, {
+        disableMovement = true,
+        disableCarMovement = false,
+        disableMouse = false,
+        disableCombat = false,
+    })
+    Citizen.Wait(4000)
+	TriggerServerEvent('qb-pizzathis:add:mshake')
+    QBCore.Functions.Notify("You made a Milkshake", "success")
+end  
    
 RegisterNetEvent("qb-pizzathis:shop")
 AddEventHandler("qb-pizzathis:shop", function()

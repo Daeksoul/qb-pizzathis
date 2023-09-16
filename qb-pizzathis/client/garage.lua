@@ -42,7 +42,7 @@ end)
 
 RegisterNetEvent('qb-pizzathis:spawn:ped')
 AddEventHandler('qb-pizzathis:spawn:ped',function(coords)
-	local hash = 'ig_floyd'
+	local hash = 'ig_talcc'
 
 	RequestModel(hash)
 	while not HasModelLoaded(hash) do 
@@ -79,12 +79,12 @@ function drawNotification(Notification)
 end
 
 RegisterNetEvent('qb-pizzathis:garage')
-AddEventHandler('qb-pizzathis:garage', function(pt)
-    local vehicle = pt.vehicle  
+AddEventHandler('qb-pizzathis:garage', function(bs)
+    local vehicle = bs.vehicle  
     local coords = Config.CarSpawnLocation
         if PlayerData.job.onduty then
             if PlayerData.job.name == Config.Job then
-                if vehicle == 'foodbike' then			--Food Delivery Faggio Sport
+                if vehicle == 'foodbike' then		
                     QBCore.Functions.SpawnVehicle(vehicle, function(veh)
                         SetVehicleNumberPlateText(veh, "P1ZTH1"..tostring(math.random(1000, 9999)))
                         exports['LegacyFuel']:SetFuel(veh, 100.0)
@@ -93,7 +93,7 @@ AddEventHandler('qb-pizzathis:garage', function(pt)
                         TriggerEvent("vehiclekeys:client:SetOwner", GetVehicleNumberPlateText(veh))
                         SetVehicleEngineOn(veh, true, true)
                     end, coords, true)
-                elseif vehicle == 'foodcar4' then		--Food Delivery Panto 
+                elseif vehicle == 'foodcar4' then		
                     QBCore.Functions.SpawnVehicle(vehicle, function(veh)
                         SetVehicleNumberPlateText(veh, "P1ZTH1"..tostring(math.random(1000, 9999)))
                         SetVehicleLivery(veh, 14)
@@ -136,12 +136,12 @@ RegisterNetEvent('garage:PizzaThisGarage', function()
             }
         },
         {
-            header = "• Pizza This! Panto",									--Needs to be amended to the Pizza vehicle
-            txt = "Pizza This! Delivery Car",									--Needs to be amended to the Pizza vehicle
+            header = "• Pizza This! Panto",
+            txt = "Pizza This! Delivery Car",
             params = {
                 event = "qb-pizzathis:garage",
                 args = {
-                    vehicle = 'foodcar4',									--Needs to be amended to the Pizza vehicle
+                    vehicle = 'foodcar4',
                 }
             }
         },
