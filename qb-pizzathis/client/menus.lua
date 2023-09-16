@@ -57,8 +57,8 @@ Citizen.CreateThread(function()
 			distance = 1.5
 	})
 
-	exports['qb-target']:AddBoxZone("pizzathisoven", vector3(814.24, -752.95, 26.34), 1.8, 1.0, {
-		name="pizzathisoven",
+--[[ 	exports['qb-target']:AddBoxZone("pizzathispizzaoven", vector3(814.24, -752.95, 26.34), 1.8, 1.0, {
+		name="pizzaoven",
 		heading=34,
 		debugPoly=false,
 		minZ=26.34,
@@ -73,7 +73,7 @@ Citizen.CreateThread(function()
 			},
 		},
 		distance = 1.5
-	})
+	}) ]]
 
     --SAVED FOR FUTURE USE WITH EXTRA GOODS TO BE COOKED IN KITCHEN
 --[[ 	exports['qb-target']:AddBoxZone("burgershotcooker2 ", vector3(-1202.94, -897.38, 14.0), 1.7, 1, {
@@ -170,7 +170,7 @@ Citizen.CreateThread(function()
 
 
             -----NEED TO FIGURE OUT WHAT THIS IS/DOES
-        exports['qb-target']:AddBoxZone("craftfood", vector3(807.71, -757.5, 26.78), 1.8, 0.7, {
+        exports['qb-target']:AddBoxZone("craftfood", vector3(814.24, -752.95, 26.34), 1.8, 0.7, {
             name="craftfood",
             heading=304,
             debugPoly=false,
@@ -305,67 +305,59 @@ end) ]]
 
 ----TESTING TO SEE IF SCRIPT WORKS OR NOT AS ABOVE IS NOT TRIGGERING
 
-RegisterNetEvent('qb-pizzathis-menu:PizzaOven', function(data)
+RegisterNetEvent('qb-pizzathis-menu:Food', function(data)
     exports['qb-menu']:openMenu({
         {
             
-            header = "| Available Food Orders |",
+            header = "| Available Food |",
             isMenuHeader = true, -- Set to true to make a nonclickable title
         },
         {
             
-            header = "• Tiramisu",
-            txt = "Eggs , Ground Coffee , Dairy Products , Chocolate Products , Lady Fingers",
+            header = "• Moneyshot Burger",
+            txt = "Bun , Cooked Patty , Tomato , Lettuce",
             params = {
-                event = "qb-pizzathis:tiramisu"
+                event = "qb-burgershot:MoneyShot"
             }
         },
         {
             
-            header = "• Calamri Marinara",
-            txt = "Squid , Spaghetti , Sauce",
+            header = "• Meat Free Burger",
+            txt = "Bun , Tomato , Lettuce",
             params = {
-                event = "qb-pizzathis:calamri-marinara"
+                event = "qb-burgershot:MeatFree"
             }
         },
         {
             
-            header = "• Spaghetti Meatballs",
-            txt = "Spaghetti , Mince Beef , Sauce",
+            header = "• Bleeder Burger",
+            txt = "Bun , Cooked Patty , Tomato , Lettuce",
             params = {
-                event = "qb-pizzathis:spaghetti-meatballs"
+                event = "qb-burgershot:BleederBurger"
             }
         },
         {
             
-            header = "• Pasta Alla Vodka",
-            txt = "Spaghetti , Vodka , Dairy Products , Vegetables",
+            header = "• The Heart Stopper",
+            txt = "Bun , Cooked Patty , Tomato , Lettuce",
             params = {
-                event = "qb-pizzathis:alla-vodka"
+                event = "qb-burgershot:HeartStopper"
             }
         },
         {
             
-            header = "• Cheese Pizza",
-            txt = "Dough , Sauce , Cheese",
+            header = "• Torpedo Roll",
+            txt = "Bun , Cooked Meat",
             params = {
-                event = "qb-pizzathis:cheese-pizza"
+                event = "qb-burgershot:Torpedo"
             }
         },
         {
             
-            header = "• Diavola Pizza",
-            txt = "Dough , Sauce , Cheese , Vegetables , Salami",
+            header = "• Murder Meal",
+            txt = "The Heart Stopper, Fries and SoftDrink",
             params = {
-                event = "qb-pizzathis:diavola-pizza"
-            }
-        },
-        {
-            
-            header = "• Vegetarian Pizza",
-            txt = "Dough , Sauce , Cheese , Vegetables",
-            params = {
-                event = "qb-pizzathis:vegetarian-pizza"
+                event = "qb-burgershot:CreateMurderMeal"
             }
         },
         {
@@ -418,7 +410,7 @@ RegisterNetEvent('qb-pizzathis-menu:DrinkMenu', function(data)
             header = "• Bottle of Water",
             txt = "bo'ohw'o'wo'er, innit bruv",
             params = {
-                event = "qb-pizzathis:water"
+                event = "qb-pizzathis:water_bottle"
             }
         },
         {
@@ -426,7 +418,7 @@ RegisterNetEvent('qb-pizzathis-menu:DrinkMenu', function(data)
             header = "• Soda",
             txt = "Fizzy Soda Drink",
             params = {
-                event = "qb-pizzathis:soda"
+                event = "qb-pizzathis:sodacup"
             }
         },
         {
@@ -434,7 +426,7 @@ RegisterNetEvent('qb-pizzathis-menu:DrinkMenu', function(data)
             header = "• White Wine",
             txt = "For those sophistocated types",
             params = {
-                event = "qb-pizzathis:wwine"
+                event = "qb-pizzathis:whitewine"
             }
         },
         {
@@ -442,7 +434,7 @@ RegisterNetEvent('qb-pizzathis-menu:DrinkMenu', function(data)
             header = "• Red Wine",
             txt = "For those sophistocated types",
             params = {
-                event = "qb-pizzathis:rwine"
+                event = "qb-pizzathis:redwine"
             }
         },
         {
