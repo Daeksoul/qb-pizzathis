@@ -194,7 +194,7 @@ QBCore.Functions.CreateCallback('qb-pizzathis:server:get:dough', function(source
     end
 end)
 
-RegisterNetEvent('qb-burgershot:add:water', function()
+RegisterNetEvent('qb-pizzathis:add:water', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
 
@@ -202,7 +202,7 @@ RegisterNetEvent('qb-burgershot:add:water', function()
     TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["water_bottle"], "add")
 end)
 
-RegisterNetEvent('qb-burgershot:add:soda', function()
+RegisterNetEvent('qb-pizzathis:add:soda', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
 
@@ -210,7 +210,7 @@ RegisterNetEvent('qb-burgershot:add:soda', function()
     TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["sodacup"], "add")
 end)
 
-RegisterNetEvent('qb-burgershot:add:whitewine', function()
+RegisterNetEvent('qb-pizzathis:add:whitewine', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
 
@@ -218,7 +218,7 @@ RegisterNetEvent('qb-burgershot:add:whitewine', function()
     TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["whitewine"], "add")
 end)
 
-RegisterNetEvent('qb-burgershot:add:redwine', function()
+RegisterNetEvent('qb-pizzathis:add:redwine', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
 
