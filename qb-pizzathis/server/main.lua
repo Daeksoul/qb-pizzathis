@@ -167,7 +167,7 @@ RegisterNetEvent('qb-pizzathis:create:vegetarian-pizza', function()
     TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["vegetarian-pizza"], "add")
 end)
 
---INGREDIENTS - UNSURE HOW THESE ACTUALL WORK?
+--INGREDIENTS - UNSURE HOW THESE ACTUALLY WORK?
 
 QBCore.Functions.CreateCallback('qb-pizzathis:server:get:sauce', function(source, cb)
     local src = source
@@ -194,6 +194,37 @@ QBCore.Functions.CreateCallback('qb-pizzathis:server:get:dough', function(source
     end
 end)
 
+RegisterNetEvent('qb-burgershot:add:water', function()
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+
+    Player.Functions.AddItem("water_bottle", 1)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["water_bottle"], "add")
+end)
+
+RegisterNetEvent('qb-burgershot:add:soda', function()
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+
+    Player.Functions.AddItem("sodacup", 1)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["sodacup"], "add")
+end)
+
+RegisterNetEvent('qb-burgershot:add:whitewine', function()
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+
+    Player.Functions.AddItem("whitewine", 1)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["whitewine"], "add")
+end)
+
+RegisterNetEvent('qb-burgershot:add:redwine', function()
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+
+    Player.Functions.AddItem("redwine", 1)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["redwine"], "add")
+end)
 
 --BILLING
 

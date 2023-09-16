@@ -57,8 +57,8 @@ Citizen.CreateThread(function()
 			distance = 1.5
 	})
 
-	exports['qb-target']:AddBoxZone("pizzeriaoven", vector3(814.24, -752.95, 26.34), 1.8, 1.0, {
-		name="pizzeriaoven",
+	exports['qb-target']:AddBoxZone("pizzaoven", vector3(814.24, -752.95, 26.34), 1.8, 1.0, {
+		name="pizzaoven",
 		heading=34,
 		debugPoly=false,
 		minZ=26.34,
@@ -66,7 +66,7 @@ Citizen.CreateThread(function()
 	}, {
 		options = {
 			{
-				event = "qb-pizzathis:PizzeriaOven",
+				event = "qb-pizzathis:PizzaOven",
 				icon = "fa-solid fa-fire-burner",
 				label = "Pizza Oven",
 				job = Config.Job,
@@ -231,7 +231,7 @@ end)
 
 -- QB-MENU --
 
-RegisterNetEvent('qb-pizzathis-menu:PizzeriaOven', function(data)
+--[[ RegisterNetEvent('qb-pizzathis-menu:PizzeriaOven', function(data)
     exports['qb-menu']:openMenu({
         {
             
@@ -300,8 +300,81 @@ RegisterNetEvent('qb-pizzathis-menu:PizzeriaOven', function(data)
             isMenuHeader = true, -- Set to true to make a nonclickable title
         },
     })
-end)
+end) ]]
 
+
+----TESTING TO SEE IF SCRIPT WORKS OR NOT AS ABOVE IS NOT TRIGGERING
+
+RegisterNetEvent('qb-pizzathis-menu:PizzaOven', function(data)
+    exports['qb-menu']:openMenu({
+        {
+            
+            header = "| Available Food Orders |",
+            isMenuHeader = true, -- Set to true to make a nonclickable title
+        },
+        {
+            
+            header = "• Tiramisu",
+            txt = "Eggs , Ground Coffee , Dairy Products , Chocolate Products , Lady Fingers",
+            params = {
+                event = "qb-pizzathis:tiramisu"
+            }
+        },
+        {
+            
+            header = "• Calamri Marinara",
+            txt = "Squid , Spaghetti , Sauce",
+            params = {
+                event = "qb-pizzathis:calamri-marinara"
+            }
+        },
+        {
+            
+            header = "• Spaghetti Meatballs",
+            txt = "Spaghetti , Mince Beef , Sauce",
+            params = {
+                event = "qb-pizzathis:spaghetti-meatballs"
+            }
+        },
+        {
+            
+            header = "• Pasta Alla Vodka",
+            txt = "Spaghetti , Vodka , Dairy Products , Vegetables",
+            params = {
+                event = "qb-pizzathis:alla-vodka"
+            }
+        },
+        {
+            
+            header = "• Cheese Pizza",
+            txt = "Dough , Sauce , Cheese",
+            params = {
+                event = "qb-pizzathis:cheese-pizza"
+            }
+        },
+        {
+            
+            header = "• Diavola Pizza",
+            txt = "Dough , Sauce , Cheese , Vegetables , Salami",
+            params = {
+                event = "qb-pizzathis:diavola-pizza"
+            }
+        },
+        {
+            
+            header = "• Vegetarian Pizza",
+            txt = "Dough , Sauce , Cheese , Vegetables",
+            params = {
+                event = "qb-pizzathis:vegetarian-pizza"
+            }
+        },
+        {
+            id = 7,
+            header = "Close (ESC)",
+            isMenuHeader = true, -- Set to true to make a nonclickable title
+        },
+    })
+end)
 
 RegisterNetEvent('qb-pizzathis-menu:OrderMenu', function(data)
     exports['qb-menu']:openMenu({
@@ -337,13 +410,13 @@ RegisterNetEvent('qb-pizzathis-menu:DrinkMenu', function(data)
     exports['qb-menu']:openMenu({
         {
             id = 0,
-            header = "| Drink Menu |",
+            header = "| Drinks Menu |",
             isMenuHeader = true, -- Set to true to make a nonclickable title
         },
         {
             
-            header = "• Water",
-            txt = "Plain ol' Water",
+            header = "• Bottle of Water",
+            txt = "bo'ohw'o'wo'er, innit bruv",
             params = {
                 event = "qb-pizzathis:water"
             }
