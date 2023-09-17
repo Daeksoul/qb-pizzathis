@@ -132,7 +132,8 @@ exports['qb-target']:AddBoxZone("pizzathiscooker", vector3(814.24, -752.95, 26.3
     --SAVED FOR FUTURE USE WITH FRIED GOODS
     exports['qb-target']:AddBoxZone("pizzathisfryer", vector3(807.66, -761.21, 26.78), 2.5, 1.5, {
 		name="pizzathisfryer",
-		heading=35,
+		--heading=35,
+        heading=205,
 		debugPoly=false,
 		minZ=26.78,
 		maxZ=28.78,
