@@ -350,6 +350,14 @@ RegisterNetEvent("qb-pizzathis:mShake", function()
     end
 end)
 
+RegisterNetEvent("qb-pizzathis:water_bottle", function()
+    if onDuty then
+           MakeWater()
+    else
+        QBCore.Functions.Notify("You must be Clocked into work", "error")
+    end
+end)
+
 RegisterNetEvent("qb-pizzathis:pizzathis-wedges", function()
     if onDuty then
 		local HasItem = QBCore.Functions.HasItem("pizzathis-potato")
@@ -453,6 +461,19 @@ function MakeMShake()
     Citizen.Wait(4000)
 	TriggerServerEvent('qb-pizzathis:add:mshake')
     QBCore.Functions.Notify("You made a Milkshake", "success")
+end  
+
+function MakeWater()
+	TriggerServerEvent('qb-pizzathis:add:water_bottle')
+    QBCore.Functions.Progressbar("pickup", "Grabbing a bottle..", 4000, false, false, {
+        disableMovement = true,
+        disableCarMovement = false,
+        disableMouse = false,
+        disableCombat = false,
+    })
+    Citizen.Wait(4000)
+	TriggerServerEvent('qb-pizzathis:add:water_bottle')
+    QBCore.Functions.Notify("You grabbed a bottle of water", "success")
 end  
    
 RegisterNetEvent("qb-pizzathis:shop")
