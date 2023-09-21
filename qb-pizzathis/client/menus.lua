@@ -131,7 +131,7 @@ exports['qb-target']:AddBoxZone("pizzathiscooker", vector3(814.24, -752.95, 26.3
 	}) ]]
 
     --NEED TO CORRECT HEIGHT OF THE MENU PROMPT
-    exports['qb-target']:AddBoxZone("pizzathisfryer", vector3(807.66, -761.21, 20.78), 2.5, 1.5, {
+    exports['qb-target']:AddBoxZone("pizzathisfryer", vector3(807.68, -761.2, 26.78), 2.5, 1.5, {
 		name="pizzathisfryer",
 		heading=35,
 		debugPoly=false,
@@ -140,9 +140,9 @@ exports['qb-target']:AddBoxZone("pizzathiscooker", vector3(814.24, -752.95, 26.3
 		}, {
 		    options = {
 			{
-			    event = "qb-pizzathis:Fries",
+			    event = "qb-pizzathis:Wedges",
 			    icon = "fas fa-box",
-			    label = "Make Fries",
+			    label = "Make Wedges",
 			    job = Config.Job,
 			},
 		    },
@@ -327,7 +327,8 @@ exports['qb-target']:AddBoxZone("pizzathiscooker", vector3(814.24, -752.95, 26.3
 
 -- QB-MENU --
 
-RegisterNetEvent('qb-pizzathis-menu:Burgers', function(data)
+--WORKING MENU, COMMENTING OUT FOR NOW
+--[[ RegisterNetEvent('qb-pizzathis-menu:Burgers', function(data)
     exports['qb-menu']:openMenu({
         {
             
@@ -377,7 +378,7 @@ RegisterNetEvent('qb-pizzathis-menu:Burgers', function(data)
         {
             
             header = "• Murder Meal",
-            txt = "The Heart Stopper, Fries and SoftDrink",
+            txt = "The Heart Stopper, Wedges and SoftDrink",
             params = {
                 event = "qb-pizzathis:CreateMurderMeal"
             }
@@ -388,12 +389,12 @@ RegisterNetEvent('qb-pizzathis-menu:Burgers', function(data)
             isMenuHeader = true, -- Set to true to make a nonclickable title
         },
     })
-end)
+end) ]]
 
 
 --LEAVING THIS HERE FOR FUTURE REFERENCE
 
---[[ RegisterNetEvent('qb-pizzathis-menu:PizzeriaOven', function(data)
+RegisterNetEvent('qb-pizzathis-menu:Burgers', function(data)
     exports['qb-menu']:openMenu({
         {
             
@@ -403,7 +404,7 @@ end)
         {
             
             header = "• Tiramisu",
-            txt = "Eggs (2) , Ground Coffee (2) , Dairy Products (2) , Chocolate Products (2) , Lady Fingers (2) ",
+            txt = "Eggs, Ground Coffee, Dairy Products, Chocolate Products, Lady Fingers ",
             params = {
                 event = "qb-pizzathis:tiramisu"
             }
@@ -411,7 +412,7 @@ end)
         {
             
             header = "• Calamri Marinara",
-            txt = "Squid (1) , Spaghetti (3) , Sauce (3)",
+            txt = "Squid, Spaghetti, Sauce",
             params = {
                 event = "qb-pizzathis:calamri-marinara"
             }
@@ -419,7 +420,7 @@ end)
         {
             
             header = "• Spaghetti Meatballs",
-            txt = "spaghetti (1) , Mince Beef (3) , sauce (3)",
+            txt = "spaghetti, Mince Beef, Sauce",
             params = {
                 event = "qb-pizzathis:spaghetti-meatballs"
             }
@@ -427,7 +428,7 @@ end)
         {
             
             header = "• Pasta Alla Vodka",
-            txt = "spaghetti (1) , Vodka (3) , Dairy Products (2) , Vegetables (2)",
+            txt = "Spaghetti, Vodka, Dairy Products, Vegetables",
             params = {
                 event = "qb-pizzathis:alla-vodka"
             }
@@ -435,7 +436,7 @@ end)
         {
             
             header = "• Cheese Pizza",
-            txt = "Dough (1) , Sauce (3) , Cheese (4)",
+            txt = "Dough, Sauce, Cheese",
             params = {
                 event = "qb-pizzathis:cheese-pizza"
             }
@@ -443,7 +444,7 @@ end)
         {
             
             header = "• Diavola Pizza",
-            txt = "Dough (1) , Sauce (3) , Cheese (4) , Vegetables (2) , Salami (2)",
+            txt = "Dough, Sauce, Cheese, Vegetables, Salami",
             params = {
                 event = "qb-pizzathis:diavola-pizza"
             }
@@ -451,7 +452,7 @@ end)
         {
             
             header = "• Vegetarian Pizza",
-            txt = "Dough (1) , Sauce (3) , Cheese (4) , Vegetables (2)",
+            txt = "Dough, Sauce, Cheese, Vegetables",
             params = {
                 event = "qb-pizzathis:vegetarian-pizza"
             }
@@ -462,7 +463,7 @@ end)
             isMenuHeader = true, -- Set to true to make a nonclickable title
         },
     })
-end) ]]
+end)
 
 RegisterNetEvent('qb-pizzathis-menu:OrderMenu', function(data)
     exports['qb-menu']:openMenu({
@@ -474,7 +475,7 @@ RegisterNetEvent('qb-pizzathis-menu:OrderMenu', function(data)
         {
             
             header = "• Order Items",
-            txt = "Order New Ingredients!",
+            txt = "Order Ingredients",
             params = {
                 event = "qb-pizzathis:shop"
             }
@@ -482,7 +483,7 @@ RegisterNetEvent('qb-pizzathis-menu:OrderMenu', function(data)
         {
            
             header = "• Open Fridge",
-            txt = "See what you have in storage",
+            txt = "Open the Fridge",
             params = {
                 event = "qb-pizzathis:Storage2"
             }
@@ -504,7 +505,7 @@ RegisterNetEvent('qb-pizzathis-menu:DrinkMenu', function(data)
         {
             
             header = "• Soft Drink",
-            txt = "Fizzy Soda Drink",
+            txt = "Fizzy Soda Drink, in a styrofoam cup",
             params = {
                 event = "qb-pizzathis:SoftDrink"
             }
@@ -512,7 +513,7 @@ RegisterNetEvent('qb-pizzathis-menu:DrinkMenu', function(data)
         {
             
             header = "• Milkshake",
-            txt = "Milkshake Formula",
+            txt = "Flavoured Milkshake, yum",
             params = {
                 event = "qb-pizzathis:mShake"
             }
@@ -527,18 +528,39 @@ RegisterNetEvent('qb-pizzathis-menu:DrinkMenu', function(data)
         },
         {
             
-            header = "• White Wine",
-            txt = "For those sophistocated types",
+            header = "• Coffee",
+            txt = "Wake me up, before you go-go.",
             params = {
-                event = "qb-pizzathis:whitewine"
+                event = "qb-pizzathis:coffee"
             }
         },
         {
             
+            header = "• Grape Juice",
+            txt = "Tart and Fruity",
+            params = {
+                event = "qb-pizzathis:grapejuice"
+            }
+        },
+        {
+            header = "• Pißwasser Beer",
+            txt = "You're In, For A Good Time",
+            params = {
+            event = "qb-pizzathis:beer"
+            }
+        },
+        {
             header = "• Red Wine",
             txt = "For those sophistocated types",
             params = {
-                event = "qb-pizzathis:redwine"
+            event = "qb-pizzathis:redwine"
+            }
+        },
+        {
+            header = "• White Wine",
+            txt = "For those sophistocated types",
+            params = {
+            event = "qb-pizzathis:whitewine"
             }
         },
         {
