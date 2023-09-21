@@ -33,14 +33,14 @@ Citizen.CreateThread(function()
 		    {  
 			event = "qb-pizzathis:DutyB",
 			icon = "far fa-clipboard",
-			label = "Clock On/Off",
+			label = "Clock On / Off",
 			job = Config.Job,
 		    },
 		},
 		distance = 1.5
 	})
 
-    exports['qb-target']:AddBoxZone("pizza_tray_1", vector3(810.97, -752.97, 26.54), 1.05, 1.0, {
+    exports['qb-target']:AddBoxZone("pizza_tray_1", vector3(810.87, -751.99, 28.03), 1.05, 1.0, {
         name = "pizza_tray_1",
         heading = 35.0,
         debugPoly = false,
@@ -50,19 +50,19 @@ Citizen.CreateThread(function()
         options = {
             {
             event = "qb-pizzathis:Tray1",
-            icon = "far fa-clipboard",
+            icon = "fa-solid fa-plate-wheat",
             label = "Tray 1",
             },
         },
         distance = 1.5
     })
 
---[[ 	exports['qb-target']:AddBoxZone("pizza_tray_2", vector3(-1193.87, -894.38, 14.0), 0.5, 0.7, {
+exports['qb-target']:AddBoxZone("pizza_tray_2", vector3(810.84, -750.73, 28.03), 0.5, 0.7, {
     name="pizza_tray_2",
     heading=318,
     debugPoly=false,
-    minZ=14.0,
-    maxZ=14.4,
+    minZ=26.54,
+    maxZ=28.54,
 }, {
     options = {
         {
@@ -74,7 +74,8 @@ Citizen.CreateThread(function()
     distance = 1.5
 })
 
-exports['qb-target']:AddBoxZone("pizza_tray_3", vector3(-1193.88, -906.98, 14.0), 1, 1, {
+---ROOM FOR EXPANSION IF EXTRA NEEDED
+--[[ 	exports['qb-target']:AddBoxZone("pizza_tray_3", vector3(-1193.88, -906.98, 14.0), 1, 1, {
     name="pizza_tray_3",
     heading=350,
     debugPoly=false,
@@ -91,7 +92,7 @@ exports['qb-target']:AddBoxZone("pizza_tray_3", vector3(-1193.88, -906.98, 14.0)
     distance = 3.5
 }) ]]
 
----CONFIRM LOCATION / POSSIBLY AMEND COORDS TO COOKER/OVEN IN THE KITCHEN?
+---LEFT SIDE OF PIZZA OVEN BEHIND BAR
 exports['qb-target']:AddBoxZone("pizzathiscooker", vector3(814.24, -752.95, 26.34), 1.8, 1.0, {
     name="pizzathiscooker",
     heading=34,
@@ -102,8 +103,8 @@ exports['qb-target']:AddBoxZone("pizzathiscooker", vector3(814.24, -752.95, 26.3
     options = {
         {
             event = "qb-pizzathis:PattyFry",
-            icon = "fas fa-hamburger",
-            label = "Burger Cook Station",
+            icon = "fa-solid fa-pizza-slice",
+            label = "Cooking Station",
             job = Config.Job,
         },
     },
@@ -129,13 +130,13 @@ exports['qb-target']:AddBoxZone("pizzathiscooker", vector3(814.24, -752.95, 26.3
 		distance = 1.5
 	}) ]]
 
-    --SAVED FOR FUTURE USE WITH FRIED GOODS
-    exports['qb-target']:AddBoxZone("pizzathisfryer", vector3(807.66, -761.21, 26.78), 2.5, 1.5, {
+    --NEED TO CORRECT HEIGHT OF THE MENU PROMPT
+    exports['qb-target']:AddBoxZone("pizzathisfryer", vector3(807.66, -761.21, 20.78), 2.5, 1.5, {
 		name="pizzathisfryer",
 		heading=35,
 		debugPoly=false,
-		minZ=26.78,
-		maxZ=28.78,
+		minZ=20.78,
+		maxZ=22.78,
 		}, {
 		    options = {
 			{
@@ -196,7 +197,7 @@ exports['qb-target']:AddBoxZone("pizzathiscooker", vector3(814.24, -752.95, 26.3
                 {
                     event = "qb-pizzathis-menu:OrderMenu",
                     icon = "fas fa-laptop",
-                    label = "Order Ingredients!",
+                    label = "Order Ingredients / Open Fridge",
                     job = Config.Job,
                 },
             },
@@ -221,7 +222,7 @@ exports['qb-target']:AddBoxZone("pizzathiscooker", vector3(814.24, -752.95, 26.3
             distance = 1.5
         })
 
-
+            ---RIGHT SIDE OF THE PIZZA OVEN BEHIND THE BAR
             exports['qb-target']:AddBoxZone("craftburger", vector3(814.24, -752.95, 26.34), 1.8, 0.7, {
                 name="craftburger",
                 heading=304,
