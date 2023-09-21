@@ -92,8 +92,8 @@ exports['qb-target']:AddBoxZone("pizza_tray_2", vector3(810.84, -750.73, 28.03),
     distance = 3.5
 }) ]]
 
----LEFT SIDE OF PIZZA OVEN BEHIND BAR
-exports['qb-target']:AddBoxZone("pizzathiscooker", vector3(814.24, -752.95, 26.34), 1.8, 1.0, {
+---LEFT SIDE OF PIZZA OVEN BEHIND BAR // UNUSED FOR NOW, AS USING 'CRAFT STATION'
+--[[ exports['qb-target']:AddBoxZone("pizzathiscooker", vector3(814.24, -752.95, 26.34), 1.8, 1.0, {
     name="pizzathiscooker",
     heading=34,
     debugPoly=false,
@@ -109,7 +109,7 @@ exports['qb-target']:AddBoxZone("pizzathiscooker", vector3(814.24, -752.95, 26.3
         },
     },
     distance = 1.5
-})
+}) ]]
 
     --POSSIBLY AMEND COORDS TO COOKER/OVEN IN THE KITCHEN?
 --[[ 	exports['qb-target']:AddBoxZone("pizzathiscooker2 ", vector3(-1202.94, -897.38, 14.0), 1.7, 1, {
@@ -233,8 +233,8 @@ exports['qb-target']:AddBoxZone("pizzathiscooker", vector3(814.24, -752.95, 26.3
                     options = {
                         {
                             event = "qb-pizzathis-menu:Burgers",
-                            icon = "fas fa-cheeseburger",
-                            label = "Burger Work Station",
+                            icon = "fa-solid fa-pizza-slice",
+                            label = "Cooking Station - Right",
                             job = Config.Job,
                         },
                     },
