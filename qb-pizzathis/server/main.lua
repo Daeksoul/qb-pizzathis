@@ -328,6 +328,14 @@ RegisterNetEvent('qb-pizzathis:add:mshake', function()
     TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["pizzathis-mshake"], "add")
 end)
 
+RegisterNetEvent('qb-pizzathis:add:water_bottle', function()
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+
+    Player.Functions.AddItem("water_bottle", 1)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["water_bottle"], "add")
+end)
+
 --[[ RegisterNetEvent('qb-pizzathis:remove:rawpatty', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
