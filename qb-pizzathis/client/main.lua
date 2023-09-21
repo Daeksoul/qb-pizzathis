@@ -326,7 +326,7 @@ end)
 
 RegisterNetEvent("qb-pizzathis:SoftDrink", function()
     if onDuty then
-		local HasItem = QBCore.Functions.HasItem("burger-sodasyrup")
+		local HasItem = QBCore.Functions.HasItem("pizzathis-sodasyrup")
         if HasItem then
            MakeSoftDrink()
         else
@@ -339,7 +339,7 @@ end)
 
 RegisterNetEvent("qb-pizzathis:mShake", function()
     if onDuty then
-	local HasItem = QBCore.Functions.HasItem("burger-mshakeformula")
+	local HasItem = QBCore.Functions.HasItem("pizzathis-mshakeformula")
         if HasItem then
            MakeMShake()
         else
@@ -350,9 +350,9 @@ RegisterNetEvent("qb-pizzathis:mShake", function()
     end
 end)
 
-RegisterNetEvent("qb-pizzathis:Fries", function()
+RegisterNetEvent("qb-pizzathis:pizzathis-wedges", function()
     if onDuty then
-		local HasItem = QBCore.Functions.HasItem("burger-potato")
+		local HasItem = QBCore.Functions.HasItem("pizzathis-potato")
         if HasItem then
            MakeFries()
         else
@@ -364,7 +364,7 @@ RegisterNetEvent("qb-pizzathis:Fries", function()
 end)
 
 
-RegisterNetEvent("qb-pizzathis:PattyFry", function()
+--[[ RegisterNetEvent("qb-pizzathis:PattyFry", function()
     if onDuty then
 	local HasItem = QBCore.Functions.HasItem("burger-raw")
         if HasItem then
@@ -375,12 +375,12 @@ RegisterNetEvent("qb-pizzathis:PattyFry", function()
     else
         QBCore.Functions.Notify("You must be Clocked into work", "error")
     end
-end)
+end) ]]
 
 -- Functions --
 function MakeFries()
-	TriggerServerEvent('qb-pizzathis:remove:potato')
-	QBCore.Functions.Progressbar("pickup", "Frying the fries..", 4000, false, false, {
+	TriggerServerEvent('qb-pizzathis:remove:pizzathis-potato')
+	QBCore.Functions.Progressbar("pickup", "Frying the wedges..", 4000, false, false, {
 	    disableMovement = true,
 	    disableCarMovement = true,
 	    disableMouse = false,
@@ -397,8 +397,8 @@ function MakeFries()
 	    }
 	)
 	Citizen.Wait(4000)
-	TriggerServerEvent('qb-pizzathis:add:fries')
-	QBCore.Functions.Notify("You made 4 fries", "success")
+	TriggerServerEvent('qb-pizzathis:add:pizzathis-wedges')
+	QBCore.Functions.Notify("You made 4 wedges", "success")
 	StopAnimTask(PlayerPedId(), "amb@prop_human_bbq@male@base", "base", 1.0)
 end
 
@@ -443,7 +443,7 @@ end
 
 function MakeMShake()
 	TriggerServerEvent('qb-pizzathis:remove:mshakeformula')
-    Player.Functions.RemoveItem("burger-mshakeformula", 1)
+    Player.Functions.RemoveItem("pizzathis-mshakeformula", 1)
     QBCore.Functions.Progressbar("pickup", "Filling up a cup..", 4000, false, false, {
         disableMovement = true,
         disableCarMovement = false,

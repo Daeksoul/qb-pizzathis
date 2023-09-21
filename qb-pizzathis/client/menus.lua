@@ -104,14 +104,14 @@ exports['qb-target']:AddBoxZone("pizza_tray_2", vector3(810.84, -750.73, 28.03),
         {
             event = "qb-pizzathis:PattyFry",
             icon = "fa-solid fa-pizza-slice",
-            label = "Cooking Station",
+            label = "Cooking Station - Left",
             job = Config.Job,
         },
     },
     distance = 1.5
 }) ]]
 
-    --POSSIBLY AMEND COORDS TO COOKER/OVEN IN THE KITCHEN?
+    --POSSIBLY AMEND COORDS TO SOMETHING IN THE KITCHEN?
 --[[ 	exports['qb-target']:AddBoxZone("pizzathiscooker2 ", vector3(-1202.94, -897.38, 14.0), 1.7, 1, {
 		name="pizzathiscooker2 ",
 		heading=34,
@@ -130,7 +130,7 @@ exports['qb-target']:AddBoxZone("pizza_tray_2", vector3(810.84, -750.73, 28.03),
 		distance = 1.5
 	}) ]]
 
-    --NEED TO CORRECT HEIGHT OF THE MENU PROMPT
+    --ITEM NEEDS ADDING TO SHARED ITEMS
     exports['qb-target']:AddBoxZone("pizzathisfryer", vector3(807.68, -761.2, 26.78), 2.5, 1.5, {
 		name="pizzathisfryer",
 		heading=35,
@@ -161,7 +161,7 @@ exports['qb-target']:AddBoxZone("pizza_tray_2", vector3(810.84, -750.73, 28.03),
                 {
                 event = "qb-pizzathis-menu:DrinkMenu",
                 icon = "fas fa-filter",
-                label = "Make Some Drinks",
+                label = "Make Drinks",
                 job = Config.Job,
                 },
             },
