@@ -57,7 +57,7 @@ Citizen.CreateThread(function()
         distance = 1.5
     })
 
-exports['qb-target']:AddBoxZone("pizza_tray_2", vector3(810.84, -750.73, 28.03), 0.5, 0.7, {
+--[[ exports['qb-target']:AddBoxZone("pizza_tray_2", vector3(810.84, -750.73, 28.03), 0.5, 0.7, {
     name="pizza_tray_2",
     heading=318,
     debugPoly=false,
@@ -72,7 +72,7 @@ exports['qb-target']:AddBoxZone("pizza_tray_2", vector3(810.84, -750.73, 28.03),
         },
     },
     distance = 1.5
-})
+}) ]]
 
 ---ROOM FOR EXPANSION IF EXTRA NEEDED
 --[[ 	exports['qb-target']:AddBoxZone("pizza_tray_3", vector3(-1193.88, -906.98, 14.0), 1, 1, {
