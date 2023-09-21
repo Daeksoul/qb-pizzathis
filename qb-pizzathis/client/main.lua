@@ -464,7 +464,6 @@ function MakeMShake()
 end  
 
 function MakeWater()
-	TriggerServerEvent('qb-pizzathis:add:water_bottle')
     QBCore.Functions.Progressbar("pickup", "Grabbing a bottle..", 4000, false, false, {
         disableMovement = true,
         disableCarMovement = false,
