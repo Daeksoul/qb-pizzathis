@@ -350,9 +350,14 @@ RegisterNetEvent("qb-pizzathis:mShake", function()
     end
 end)
 
-RegisterNetEvent("qb-pizzathis:water_bottle", function()
+RegisterNetEvent("qb-pizzathis:emptybottle", function()
     if onDuty then
+	local HasItem = QBCore.Functions.HasItem("pizzathis-emptybottle")
+		if HasItem then
            MakeWater()
+		else
+            QBCore.Functions.Notify("You don't have an empty bottle..", "error")
+        end
     else
         QBCore.Functions.Notify("You must be Clocked into work", "error")
     end
