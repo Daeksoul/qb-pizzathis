@@ -471,8 +471,10 @@ function MakeMShake()
 end  
 
 function MakeWater()
-    QBCore.Functions.Progressbar("pickup", "Grabbing a bottle..", 4000, false, false, {
-        disableMovement = true,
+	TriggerServerEvent('qb-pizzathis:remove:emptybottle')
+	Player.Functions.RemoveItem("emptybottle", 1)
+		QBCore.Functions.Progressbar("pickup", "Filling a bottle..", 4000, false, false, {
+		disableMovement = true,
         disableCarMovement = false,
         disableMouse = false,
         disableCombat = false,

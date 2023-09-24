@@ -57,6 +57,7 @@ Citizen.CreateThread(function()
         distance = 1.5
     })
 
+---ROOM FOR EXPANSION IF EXTRA NEEDED
 --[[ exports['qb-target']:AddBoxZone("pizza_tray_2", vector3(810.84, -750.73, 28.03), 0.5, 0.7, {
     name="pizza_tray_2",
     heading=318,
@@ -74,7 +75,7 @@ Citizen.CreateThread(function()
     distance = 1.5
 }) ]]
 
----ROOM FOR EXPANSION IF EXTRA NEEDED
+
 --[[ 	exports['qb-target']:AddBoxZone("pizza_tray_3", vector3(-1193.88, -906.98, 14.0), 1, 1, {
     name="pizza_tray_3",
     heading=350,
@@ -92,7 +93,7 @@ Citizen.CreateThread(function()
     distance = 3.5
 }) ]]
 
----LEFT SIDE OF PIZZA OVEN BEHIND BAR // UNUSED FOR NOW, AS USING 'CRAFT STATION'
+---LEFT SIDE OF PIZZA OVEN BEHIND BAR // UNUSED FOR NOW, AS USING 'CRAFT STATION - MAY MAKE USE TO CREATE THE DOUGH, SAUCE, ETC. IN FUTURE'
 --[[ exports['qb-target']:AddBoxZone("pizzathiscooker", vector3(814.24, -752.95, 26.34), 1.8, 1.0, {
     name="pizzathiscooker",
     heading=34,
@@ -111,7 +112,7 @@ Citizen.CreateThread(function()
     distance = 1.5
 }) ]]
 
-    --POSSIBLY AMEND COORDS TO SOMETHING IN THE KITCHEN?
+--POSSIBLY AMEND COORDS TO SOMETHING IN THE KITCHEN? // UNUSED FOR NOW AS NOWHERE TO PUT IT.
 --[[ 	exports['qb-target']:AddBoxZone("pizzathiscooker2 ", vector3(-1202.94, -897.38, 14.0), 1.7, 1, {
 		name="pizzathiscooker2 ",
 		heading=34,
@@ -130,7 +131,6 @@ Citizen.CreateThread(function()
 		distance = 1.5
 	}) ]]
 
-    --ITEM NEEDS ADDING TO SHARED ITEMS
     exports['qb-target']:AddBoxZone("pizzathisfryer", vector3(807.68, -761.2, 26.78), 2.5, 1.5, {
 		name="pizzathisfryer",
 		heading=35,
@@ -140,7 +140,7 @@ Citizen.CreateThread(function()
 		}, {
 		    options = {
 			{
-			    event = "qb-pizzathis:Wedges",
+			    event = "qb-pizzathis:pizzathis-wedges",
 			    icon = "fas fa-box",
 			    label = "Make Wedges",
 			    job = Config.Job,
@@ -326,74 +326,6 @@ Citizen.CreateThread(function()
 
 
 -- QB-MENU --
-
---WORKING MENU, COMMENTING OUT FOR NOW
---[[ RegisterNetEvent('qb-pizzathis-menu:Burgers', function(data)
-    exports['qb-menu']:openMenu({
-        {
-            
-            header = "| Available Food Items |",
-            isMenuHeader = true, -- Set to true to make a nonclickable title
-        },
-        {
-            
-            header = "• Moneyshot Burger",
-            txt = "Bun , Cooked Patty , Tomato , Lettuce",
-            params = {
-                event = "qb-pizzathis:MoneyShot"
-            }
-        },
-        {
-            
-            header = "• Meat Free Burger",
-            txt = "Bun , Tomato , Lettuce",
-            params = {
-                event = "qb-pizzathis:MeatFree"
-            }
-        },
-        {
-            
-            header = "• Bleeder Burger",
-            txt = "Bun , Cooked Patty , Tomato , Lettuce",
-            params = {
-                event = "qb-pizzathis:BleederBurger"
-            }
-        },
-        {
-            
-            header = "• The Heart Stopper",
-            txt = "Bun , Cooked Patty , Tomato , Lettuce",
-            params = {
-                event = "qb-pizzathis:HeartStopper"
-            }
-        },
-        {
-            
-            header = "• Torpedo Roll",
-            txt = "Bun , Cooked Meat",
-            params = {
-                event = "qb-pizzathis:Torpedo"
-            }
-        },
-        {
-            
-            header = "• Murder Meal",
-            txt = "The Heart Stopper, Wedges and SoftDrink",
-            params = {
-                event = "qb-pizzathis:CreateMurderMeal"
-            }
-        },
-        {
-            id = 7,
-            header = "Close (ESC)",
-            isMenuHeader = true, -- Set to true to make a nonclickable title
-        },
-    })
-end) ]]
-
-
---LEAVING THIS HERE FOR FUTURE REFERENCE
-
 RegisterNetEvent('qb-pizzathis-menu:Burgers', function(data)
     exports['qb-menu']:openMenu({
         {
