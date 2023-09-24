@@ -159,8 +159,8 @@ Config.ConsumablesDrink = {
 ['orange']           = {['name'] = 'orange', 			['label'] = 'Orange', 		['weight'] = 300, ['type'] = 'item', ['image'] = 'orange.png', 		['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Tasty Orange'},
 ['orangejuice']      = {['name'] = 'orangejuice', 		['label'] = 'Orange Juice', ['weight'] = 450, ['type'] = 'item', ['image'] = 'orangejuice.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Tasty Orange Juice'},
 ['emptybottle']      = {['name'] = 'emptybottle', 		['label'] = 'Empty Bottle', ['weight'] = 100, ['type'] = 'item', ['image'] = 'emptybottle.png', ['unique'] = false, ['useable'] = false, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'An empty bottle, what else?'},
-['pt-potato']     	 = {['name'] = 'pt-potato', 		['label'] = 'Pizza This! Potatoes', ['weight'] = 100, ['type'] = 'item', ['image'] = 'pt-potato.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Po-tay-toes.?'},
-['pt-wedges']      	 = {['name'] = 'pt-wedges', 		['label'] = 'Pizza This! Seasoned Wedges', ['weight'] = 100, ['type'] = 'item', ['image'] = 'pt-wedges.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Seasoned Wedges - bigger, better fries!'},
+['pizzathis-potato']     	 = {['name'] = 'pizzathis-potato', 		['label'] = 'Pizza This! Potatoes', ['weight'] = 100, ['type'] = 'item', ['image'] = 'pt-potato.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Po-tay-toes.?'},
+['pizzathis-wedges']      	 = {['name'] = 'pizzathis-wedges', 		['label'] = 'Pizza This! Seasoned Wedges', ['weight'] = 100, ['type'] = 'item', ['image'] = 'pt-wedges.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Seasoned Wedges - bigger, better fries!'},
 
 ```
 

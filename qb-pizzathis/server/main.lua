@@ -332,8 +332,8 @@ RegisterNetEvent('qb-pizzathis:remove:emptybottle', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
 
-    Player.Functions.RemoveItem("pizzathis-emptybottle", 1)
-    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["pizzathis-emptybottle"], "remove")
+    Player.Functions.RemoveItem("emptybottle", 1)
+    TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["emptybottle"], "remove")
 end)
 
 RegisterNetEvent('qb-pizzathis:add:water_bottle', function()

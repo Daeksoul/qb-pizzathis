@@ -353,7 +353,7 @@ end)
 --BOTTLE NEEDS ADDING TO SHARED ITEMS
 RegisterNetEvent("qb-pizzathis:emptybottle", function()
     if onDuty then
-	local HasItem = QBCore.Functions.HasItem("pizzathis-emptybottle")
+	local HasItem = QBCore.Functions.HasItem("emptybottle")
 		if HasItem then
            MakeWater()
 		else
