@@ -167,7 +167,7 @@ Config.ConsumablesDrink = {
 ## Insert into @qb-core/shared/jobs.lua    (_Amend accordingly to how you want the job ranks to be named/to pay employees_)
 ```
 QBShared.Jobs = {
-    ["pizzathis"] = {
+    ["pizzeria"] = {
 		label = "Pizza This! Employee",
 		defaultDuty = true,
 		offDutyPay = false,
@@ -206,7 +206,7 @@ QBShared.Jobs = {
 Config.BossMenus = {
 
 --CHANGE THE COORDS TO WHERE YOU WISH TO PUT THE BOSS MENU
-	['pizzathis'] = {
+	['pizzeria'] = {
 		vector3(-1192.04, -902.476, 13.998),
 	},
 }
@@ -214,7 +214,7 @@ Config.BossMenus = {
 Config.BossMenuZones = {
 
 --CHANGE THE COORDS TO WHERE YOU WISH TO PUT THE BOSS MENU
-	['pizzathis'] = {
+	['pizzeria'] = {
         { coords = vector3(-1192.04, -902.476, 13.998), length = 1.15, width = 2.6, heading = 353.0, minZ = 43.59, maxZ = 44.99 },
     },
 }
