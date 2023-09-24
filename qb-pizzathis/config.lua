@@ -93,7 +93,7 @@ label = "Shop",
             slot = 5,
         },
         [5] = {
-            name = "burger-mshakeformula",
+            name = "pizzathis-mshakeformula",
             price = 0,
             amount = 10,
             info = {},
@@ -101,7 +101,7 @@ label = "Shop",
             slot = 6,
         },
         [6] = {
-            name = "burger-sodasyrup",
+            name = "pizzathis-sodasyrup",
             price = 0,
             amount = 10,
             info = {},
@@ -156,8 +156,15 @@ label = "Shop",
             type = "item",
             slot = 14,
         },
---[[
         [13] = {
+            name = "emptybottle",
+            price = 0,
+            amount = 10,
+            info = {},
+            type = "item",
+            slot = 18,
+        },     
+        [14] = {
             name = "pizzathis-potato",  --Item needs adding to shared items, picture etc.
             price = 0,
             amount = 10,
@@ -165,7 +172,7 @@ label = "Shop",
             type = "item",
             slot = 13,
         },
-        [14] = {
+--[[    [15] = {
             name = "pineapple",  --Item needs adding to shared items, picture etc.
             price = 0,
             amount = 10,
@@ -173,7 +180,7 @@ label = "Shop",
             type = "item",
             slot = 15,
         },
-        [15] = {
+        [16] = {
             name = "ham",  --Item needs adding to shared items, picture etc.
             price = 0,
             amount = 10,
@@ -181,7 +188,7 @@ label = "Shop",
             type = "item",
             slot = 16,
         },
-        [16] = {
+        [17] = {
             name = "mushrooms",  --Item needs adding to shared items, picture etc.
             price = 0,
             amount = 10,
@@ -189,7 +196,7 @@ label = "Shop",
             type = "item",
             slot = 17,
         },
-        [17] = {
+        [18] = {
             name = "ladyfingers",
             price = 0,
             amount = 10,
@@ -197,7 +204,7 @@ label = "Shop",
             type = "item",
             slot = 18,
         },       
-        [18] = {
+        [19] = {
             name = "salt",
             price = 0,
             amount = 10,
@@ -205,7 +212,7 @@ label = "Shop",
             type = "item",
             slot = 19,
         },
-        [19] = {
+        [20] = {
             name = "flour",
             price = 0,
             amount = 10,
