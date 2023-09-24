@@ -24,7 +24,7 @@ Map - Gabz 'Pizza This' Restaurant MLO
 Delivery Vehicles - https://www.gta5-mods.com/vehicles/foodworks-food-delivery-pack
 
 
-## Insert into @qb-smallresources --> server --> consumables.lua
+## Insert into @qb-smallresources --> server --> consumables.lua  (_If not already present_)
 ```
 --PIZZA THIS!
 
@@ -51,6 +51,20 @@ QBCore.Functions.CreateUseableItem("whitewine", function(source, item)
 end)
 
 QBCore.Functions.CreateUseableItem("redwine", function(source, item)
+    local Player = QBCore.Functions.GetPlayer(source)
+	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
+        TriggerClientEvent("consumables:client:Drink", source, item.name)
+    end
+end)
+
+QBCore.Functions.CreateUseableItem("orangejuice", function(source, item)
+    local Player = QBCore.Functions.GetPlayer(source)
+	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
+        TriggerClientEvent("consumables:client:Drink", source, item.name)
+    end
+end)
+
+QBCore.Functions.CreateUseableItem("grapejuice", function(source, item)
     local Player = QBCore.Functions.GetPlayer(source)
 	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
         TriggerClientEvent("consumables:client:Drink", source, item.name)
@@ -110,7 +124,7 @@ end)
 
 
 
-## Insert into @qb-smallresources --> config.lua
+## Insert into @qb-smallresources --> config.lua   (_If not already present_)
 ```
 Config.ConsumablesEat = {
 
@@ -133,17 +147,22 @@ Config.ConsumablesDrink = {
 	["sodacup"] = math.random(40, 50),
 	["whitewine"] = math.random(40, 50),
 	["redwine"] = math.random(40, 50),
+	["orangejuice"] = math.random(40, 50),
+	["grapejuice"] = math.random(40, 50),
 } 
 ```
 
-## Insert into @qb-core/shared/items.lua 
+## Insert into @qb-core/shared/items.lua   (_If not already present_)
 
 ```
-SHARED ITEMS TO BE CONFIRMED
+['grapejuice'] 		 = {['name'] = 'grapejuice', 		['label'] = 'Grape Juice', 	['weight'] = 200, ['type'] = 'item', ['image'] = 'grapejuice.png', 	['unique'] = false, ['useable'] = true, ['shouldClose'] = false, ['combinable'] = nil,   ['description'] = 'Grape juice is said to be healthy'},
+['orange']           = {['name'] = 'orange', 			['label'] = 'Orange', 		['weight'] = 300, ['type'] = 'item', ['image'] = 'orange.png', 		['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Tasty Orange'},
+['orangejuice']      = {['name'] = 'orangejuice', 		['label'] = 'Orange Juice', ['weight'] = 450, ['type'] = 'item', ['image'] = 'orangejuice.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Tasty Orange Juice'},
+['emptybottle']      = {['name'] = 'emptybottle', 		['label'] = 'Empty Bottle', ['weight'] = 100, ['type'] = 'item', ['image'] = 'emptybottle.png', ['unique'] = false, ['useable'] = false, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'An empty bottle, what else?'},
 
 ```
 
-## Insert into @qb-core/shared/jobs.lua 
+## Insert into @qb-core/shared/jobs.lua    (_Amend accordingly to how you want the job ranks to be named/to pay employees_)
 ```
 QBShared.Jobs = {
     ["pizzathis"] = {
@@ -151,25 +170,26 @@ QBShared.Jobs = {
 		defaultDuty = true,
 		offDutyPay = false,
 		grades = {
-            ['0'] = {
+	['0'] = {
                 name = "Trainee",
                 payment = 50
             },
-			['1'] = {
+	['1'] = {
                 name = "Waiter",
                 payment = 75
             },
-			['2'] = {
+	['2'] = {
                 name = "Chef",
                 payment = 100
             },
-			['3'] = {
+	['3'] = {
                 name = "Manager",
+		isboss = true,
                 payment = 125
             },
-			['4'] = {
+	['4'] = {
                 name = "Proprietor",
-				isboss = true,
+		isboss = true,
                 payment = 150
             },
         },
@@ -183,7 +203,7 @@ QBShared.Jobs = {
 ```
 Config.BossMenus = {
 
---COORDS TO BE CHANGED
+--CHANGE THE COORDS TO WHERE YOU WISH TO PUT THE BOSS MENU
 	['pizzathis'] = {
 		vector3(-1192.04, -902.476, 13.998),
 	},
@@ -191,7 +211,7 @@ Config.BossMenus = {
 
 Config.BossMenuZones = {
 
---COORDS TO BE CHANGED
+--CHANGE THE COORDS TO WHERE YOU WISH TO PUT THE BOSS MENU
 	['pizzathis'] = {
         { coords = vector3(-1192.04, -902.476, 13.998), length = 1.15, width = 2.6, heading = 353.0, minZ = 43.59, maxZ = 44.99 },
     },
