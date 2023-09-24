@@ -350,6 +350,7 @@ RegisterNetEvent("qb-pizzathis:mShake", function()
     end
 end)
 
+--BOTTLE NEEDS ADDING TO SHARED ITEMS
 RegisterNetEvent("qb-pizzathis:emptybottle", function()
     if onDuty then
 	local HasItem = QBCore.Functions.HasItem("pizzathis-emptybottle")
@@ -363,6 +364,7 @@ RegisterNetEvent("qb-pizzathis:emptybottle", function()
     end
 end)
 
+--NEEDS ADDING TO SHARED ITEMS
 RegisterNetEvent("qb-pizzathis:pizzathis-wedges", function()
     if onDuty then
 		local HasItem = QBCore.Functions.HasItem("pizzathis-potato")
